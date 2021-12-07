@@ -1,0 +1,87 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "artesaos/seotools": "^0.20.2",
+        "coconutcraig/laravel-postmark": "^2.11",
+        "cweagans/composer-patches": "^1.7",
+        "encore/laravel-admin": "^1.8",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "jantinnerezo/livewire-alert": "^2.2",
+        "laravel-admin-ext/grid-sortable": "^1.1",
+        "laravel-frontend-presets/tall": "^4.0",
+        "laravel/framework": "^8.65",
+        "laravel/sanctum": "^2.11",
+        "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.8",
+        "owenvoke/blade-fontawesome": "^1.10",
+        "silviolleite/laravelpwa": "^2.0",
+        "spatie/image": "^1.0",
+        "spatie/laravel-honeypot": "^4.0",
+        "spatie/laravel-medialibrary": "9.8.2",
+        "wireui/wireui": "^0.14.1"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.5",
+        "fakerphp/faker": "^1.9.1",
+        "itsgoingd/clockwork": "^5.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^5.10",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "patches": {
+            "silviolleite/laravelpwa": {
+                "add-image-sizes": "https://patch-diff.githubusercontent.com/raw/silviolleite/laravel-pwa/pull/53.patch"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "backpack/devtools": {
+            "type": "composer",
+            "url": "https://repo.backpackforlaravel.com"
+        }
+    }
+}

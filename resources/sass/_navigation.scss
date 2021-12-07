@@ -1,0 +1,90 @@
+:root {
+    --clr:#222327;
+}
+
+.navigation {
+    height: 70px;
+    @apply bg-gray-100 flex justify-center;
+    z-index: 1;
+    box-shadow: 0 1px 3px 0;
+
+    ul {
+        @apply  flex;
+
+        li {
+            position: relative;
+            list-style: none;
+            width: 70px;
+            height: 70px;
+            z-index: 1;
+
+            a {
+                @apply w-full flex flex-col justify-center relative text-center items-center;
+                font-weight: 500;
+
+                .icon {
+                    position: relative;
+                    display: block;
+                    line-height: 75px;
+                    font-size: 1.5em;
+                    text-align: center;
+                    transition: 0.5s;
+                    color: var(--clr);
+                    svg {
+                        @apply w-7 h-7 my-4 mb-7;
+                    }
+                }
+            }
+
+            &.active a .icon {
+                transform: translateY(-32px);
+                color: white;
+            }
+
+            a .text {
+                position: absolute;
+                transform: translateY(20px);
+                opacity: 0;
+                color: var(--clr);
+                font-weight: 400;
+                font-size: 0.75em;
+                letter-spacing: 0.05em;
+                transition: 0.5s;
+            }
+
+            &.active a .text {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.indicator {
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    @apply bg-indigo-500 absolute;
+    border-radius: 100%;
+    border: 6px solid white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navigation ul li {
+    &:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+    }
+
+    &:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+    }
+
+    &:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+    }
+
+    &:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+    }
+}

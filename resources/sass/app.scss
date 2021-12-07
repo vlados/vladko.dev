@@ -1,0 +1,158 @@
+@import "../fonts/inter/inter";
+@import "./sweetalert2";
+@supports (font-variation-settings: normal) {
+    :root { font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+}
+
+$aos-distance: 200px; // It has to be above import
+@import "~aos/dist/aos.css";
+@import "~@fancyapps/ui/src/Fancybox/Fancybox";
+[data-aos=zoom-out] {
+    transform: scale(2.5);
+}
+
+@tailwind base;
+input:invalid, textarea:invalid, select:invalid {
+    box-shadow: none;
+}
+
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@variants (print) {
+    [data-aos^=fade][data-aos^=fade] {
+        opacity: 1;
+        transform: translateZ(0);
+
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+    .prose {
+        max-width: 100%;
+    }
+    .page-break {
+        page-break-after: always;
+
+    }
+}
+[x-cloak] {
+    display: none;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -30px;
+    visibility: hidden;
+}
+
+
+@layer base {
+    html{scroll-behavior:smooth}
+    .container {
+        @apply max-w-2xl px-6 lg:px-8;
+    }
+}
+@layer utilities {
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+}
+
+@layer components {
+
+    .sub-title {
+        @apply px-0 pt-0 pb-2 m-0 font-semibold text-center text-indigo-500 text-xs	uppercase align-baseline border-0 box-border;
+    }
+    .home-bg {
+        position: absolute;
+        max-width: 100%;
+        top: 0;
+        z-index: -1;
+        overflow: hidden;
+        right: 0;
+        padding-bottom: 5vh;
+        & > img {
+            left: 50px;
+            @apply relative;
+        }
+        .image {
+            @apply max-w-screen-xl right-0 absolute;
+            top: 100px;
+            img {
+                max-height: 700px;
+                position: relative;
+                right: -140px;
+                clip-path: url(../images/header-mask.svg#photoTop);
+                mask-image: url(../images/header-mask.svg#photoTop);
+                -webkit-mask-repeat: space;
+
+            }
+        }
+    }
+}
+
+.fancybox__main-panel {
+    flex: 0 0 auto;
+    min-height: 0;
+    margin: auto;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+/* Example of aspect ratio hack before `aspect-ratio` has good browser support, see https://caniuse.com/mdn-css_properties_aspect-ratio  */
+@media (min-aspect-ratio: 16/9) {
+    .fancybox__main-panel {
+        width: calc((100vh - 64px * 2) * 16 / 9);
+        height: calc(100vh - 64px * 2);
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fancybox__main-panel {
+        height: calc((100vw - 64px * 2) * 9 / 16);
+        width: calc(100vw - 64px * 2);
+    }
+}
+
+.fancybox__left-panel {
+    color: #222;
+    background: #fff;
+    overflow: auto;
+    padding: 3rem;
+}
+
+.fancybox__spinner {
+    color: #222;
+}
+
+.fancybox__carousel {
+    overflow: hidden;
+    margin: 0;
+    background: #f9fafb;
+}
+
+.fancybox__slide {
+    padding: 0;
+}
+
+.carousel__button.is-close {
+    top: 8px;
+    right: 8px;
+}
+
+
+.carousel__dots {
+    @apply flex bg-gray-800 bg-opacity-80 rounded-t z-20;
+    top: calc(100% - 30px);
+    z-index: 20;
+    width: min-content;
+    padding: 4px 10px;
+}
