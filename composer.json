@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "appstract/laravel-opcache": "^4.0",
         "artesaos/seotools": "^0.20.2",
         "coconutcraig/laravel-postmark": "^2.11",
         "cweagans/composer-patches": "^1.7",
