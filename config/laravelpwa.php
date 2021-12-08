@@ -3,14 +3,14 @@
 return [
     'name' => 'vladko.dev',
     'manifest' => [
-        'name' => env('APP_NAME', 'My PWA App'),
-        'short_name' => 'PWA',
+        'name' => env('APP_NAME', 'vladko.dev'),
+        'short_name' => 'vladko.dev',
         'start_url' => '/?pwa=1',
         'background_color' => '#ffffff',
-        'theme_color' => '#000000',
+        'theme_color' => '#ffffff',
         'display' => 'standalone',
         'orientation'=> 'any',
-        'status_bar'=> 'black',
+        'status_bar'=> '#ffffff',
         'icons' => [
             [
                 'path' => '/images/pwa/manifest-icon-192.maskable.png',
