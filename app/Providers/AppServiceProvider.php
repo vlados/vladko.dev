@@ -30,9 +30,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Kernel $kernel, Guard $auth)
     {
-        Livewire::addPersistentMiddleware([
-            ProtectAgainstSpam::class
-        ]);
 
         if ($this->app->isLocal()) {
             $kernel->prependMiddleware(ClockworkMiddleware::class);
