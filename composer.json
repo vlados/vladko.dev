@@ -18,7 +18,6 @@
         "laravel-frontend-presets/tall": "^4.0",
         "laravel/framework": "^8.65",
         "livewire/livewire": "^2.8",
-        "owenvoke/blade-fontawesome": "^1.10",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/image": "^1.0",
         "spatie/laravel-medialibrary": "9.8.2",
@@ -75,11 +74,5 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": {
-        "backpack/devtools": {
-            "type": "composer",
-            "url": "https://repo.backpackforlaravel.com"
-        }
-    }
+    "prefer-stable": true
 }

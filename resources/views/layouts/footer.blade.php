@@ -17,28 +17,28 @@
             <a href="#contact"
                class="text-gray-900 no-underline hover:text-indigo-700">Contact</a>
         </nav>
-        <div class="mt-8 flex justify-center space-x-6 flex-row">
-            <a href="https://github.com/vlados" target="_blank" rel="nofollow" data-tooltip="GitHub">
-                <x-fab-github class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>
-            </a>
-            <a href="https://angel.co/vlados" target="_blank" rel="nofollow" data-tooltip="AngelList">
-                <x-fab-angellist class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>
-            </a>
-            <a href="https://twitter.com/vlados" target="_blank" rel="nofollow" data-tooltip="Twitter">
-                <x-fab-twitter class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>
-            </a>
-            <a href="https://www.linkedin.com/in/vstoitsov/" target="_blank" rel="nofollow" data-tooltip="LinkedIn">
-                <x-fab-linkedin class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>
-            </a>
-            <a href="https://www.youtube.com/user/vlados01/" target="_blank" rel="nofollow"
-               data-tooltip="My YouTube channel">
-                <x-fab-youtube class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>
-            </a>
-            <a href="https://www.facebook.com/vlados" target="_blank" rel="nofollow" data-tooltip="Facebook">
-                <x-fab-facebook class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>
-            </a>
+{{--        <div class="mt-8 flex justify-center space-x-6 flex-row">--}}
+{{--            <a href="https://github.com/vlados" target="_blank" rel="nofollow" data-tooltip="GitHub">--}}
+{{--                <x-fab-github class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>--}}
+{{--            </a>--}}
+{{--            <a href="https://angel.co/vlados" target="_blank" rel="nofollow" data-tooltip="AngelList">--}}
+{{--                <x-fab-angellist class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>--}}
+{{--            </a>--}}
+{{--            <a href="https://twitter.com/vlados" target="_blank" rel="nofollow" data-tooltip="Twitter">--}}
+{{--                <x-fab-twitter class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>--}}
+{{--            </a>--}}
+{{--            <a href="https://www.linkedin.com/in/vstoitsov/" target="_blank" rel="nofollow" data-tooltip="LinkedIn">--}}
+{{--                <x-fab-linkedin class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>--}}
+{{--            </a>--}}
+{{--            <a href="https://www.youtube.com/user/vlados01/" target="_blank" rel="nofollow"--}}
+{{--               data-tooltip="My YouTube channel">--}}
+{{--                <x-fab-youtube class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>--}}
+{{--            </a>--}}
+{{--            <a href="https://www.facebook.com/vlados" target="_blank" rel="nofollow" data-tooltip="Facebook">--}}
+{{--                <x-fab-facebook class="w-6 h-6 text-gray-500 hover:text-indigo-600 fill-current"/>--}}
+{{--            </a>--}}
 
-        </div>
+{{--        </div>--}}
         <p class="mt-8 text-center text-base text-gray-400">
             &copy; 2004-{{ date("Y") }} {{ config("app.name") }}. All rights reserved.
         </p>
