@@ -17,13 +17,10 @@
         "laravel-admin-ext/grid-sortable": "^1.1",
         "laravel-frontend-presets/tall": "^4.0",
         "laravel/framework": "^8.65",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.8",
         "owenvoke/blade-fontawesome": "^1.10",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/image": "^1.0",
-        "spatie/laravel-honeypot": "^4.0",
         "spatie/laravel-medialibrary": "9.8.2",
         "wireui/wireui": "^0.14.1"
     },
