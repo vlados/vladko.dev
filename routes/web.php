@@ -13,8 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home')->withoutMiddleware("web")->withoutBlocking();
-
-Route::get('/test', function () {
-   return time();
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');

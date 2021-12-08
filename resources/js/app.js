@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs';
 import Typewriter from 'typewriter-effect/dist/core';
 import AOS from 'aos';
-import {Fancybox, Carousel, Panzoom} from "@fancyapps/ui";
+import {Fancybox, Carousel, Panzoom} from "@fancyapps/ui/dist/fancybox.umd";
 import {annotate} from 'rough-notation';
 
 window.Alpine = Alpine;

@@ -29,36 +29,27 @@
                                         </p>
                                     </div>
                                     <div class="mt-2  text-gray-700">
-                                        <p class="font-bold">
-                                            Key Qualifications &amp; Responsibilities
-                                        </p>
+                                        <p class="mb-3">Real estate marketplace dedicated to empowering consumers with
+                                            data, inspiration and knowledge around the place they call home, and
+                                            connecting them with the best investors and developers. On the other hand,
+                                            Udoma.bg gives businesses all the necessary tools to develop their brand and
+                                            reach their customers on the Internet without the need to spend tens of
+                                            thousands of levs to develop each omnichannel separately.</p>
+                                        <p><strong>Key Qualifications &amp; Responsibilities</strong></p>
                                         <ul class="list-disc list-inside">
-                                            <li>
-                                                Developed full-stack web applications which processed, analyzed, and
-                                                rendered data visually.
-                                            </li>
-                                            <li>
-                                                Liaised with back end developers, front end developers, quality
-                                                assurance
-                                                testers, and CTO as needed.
-                                            </li>
-                                            <li>
-                                                Managed time-sensitive updates, including content changes and database
-                                                upgrades.
-                                            </li>
-                                            <li>
-                                                Planned, wrote, and debugged web applications and software with complete
-                                                accuracy.
-                                            </li>
+                                            <li>Develop MVP based on Angular with server-side rendering</li>
+                                            <li>Development of Laravel based platform with administration</li>
+                                            <li>Design</li>
+                                            <li>SEO</li>
                                         </ul>
-                                        <p class="font-bold mt-5">
-                                            Key Achievements
-                                        </p>
+                                        <p>&nbsp;</p>
+                                        <p><strong>Key Achievements</strong></p>
                                         <ul class="list-disc list-inside">
-                                            <li>
-                                                Spearheaded transition from LAMP stack to MEAN stack, reducing latency
-                                                by 40% and increasing database admin effectiveness by 20%.
+                                            <li>More than 12K unique visitors per month</li>
+                                            <li>Perfect SEO &ndash; more than 60% of the traffic is from organic
+                                                search
                                             </li>
+                                            <li>Award for best web site from bgweb.org</li>
                                         </ul>
 
                                     </div>
@@ -82,8 +73,8 @@
                                 <div class="min-w-0 flex-1 ">
                                     <div class=" text-gray-500">
                                         Co-founded
-                                        <a href="#" class="font-medium text-gray-900">Free access to the real estate
-                                            market in Bulgaria</a>
+                                        <a href="#" class="font-medium text-gray-900">Free Access to the Real Estate
+                                            Market in Bulgaria</a>
                                         <span
                                             class="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5  ml-2">
                   <span class="absolute flex-shrink-0 flex items-center justify-center">
@@ -95,11 +86,22 @@
 
                                     </div>
                                     <div class="mt-2  text-gray-700">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam.
-                                        </p>
+                                        <p class="mb-2">In the past years, we provided assistance and had the chance to
+                                            closely monitor several real estate deals in different classes in Sofia and
+                                            countrywide. Every day, we encountered the problems all three parties
+                                            (buyers, sellers and intermediaries) face in concluding a real estate sale.
+                                            Everything was further complicated by the lack of systematization and an
+                                            established process. The entire path from choosing an apartment to the buyer
+                                            entering into ownership takes months and this final stage is only reached if
+                                            the initial information is correct.</p>
+                                        <p class="mb-2">Thus came the idea of creating the Free Access to the Real
+                                            Estate Market in Bulgaria Foundation, uniting the efforts of experts in
+                                            different fields and creating the udoma.bg platform &ndash; a space where
+                                            anyone can browse all new constructions, find the desired new home and check
+                                            all the available information.</p>
+                                        <p class="mb-2">We knew it wouldn&rsquo;t be easy to make such a platform, but
+                                            we were certain this is the only way for the real estate business to change
+                                            for the better.</p>
                                     </div>
 
                                 </div>
@@ -122,8 +124,8 @@
                                 <div class="min-w-0 flex-1">
                                     <div class=" text-gray-500">
                                         Co-founded
-                                        <a href="#" class="font-medium text-gray-900">Bulgarian Association for
-                                            electric mobility</a>
+                                        <a href="#" class="font-medium text-gray-900">Bulgarian Association for Electric
+                                            Mobility</a>
                                         <span
                                             class="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5  ml-2">
                   <span class="absolute flex-shrink-0 flex items-center justify-center">
@@ -135,11 +137,14 @@
 
                                     </div>
                                     <div class="mt-2  text-gray-700">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam.
-                                        </p>
+                                        <p>From the moment electric scooters appeared, I was instantly excited. But I
+                                            wanted to do something more &ndash; I wanted to leave a mark. I knew there
+                                            was a risk for it to be halted like so many other good ideas and for it not
+                                            to reach the broader public. Very soon I found like-minded people and we
+                                            established the Organization. In less than a year, it turned into an
+                                            important factor in urban mobility. We achieved amendments in some laws and
+                                            electric scooters&rsquo; quickly entering our lives as a means of
+                                            transportation for much of the population.</p>
                                     </div>
 
                                 </div>
@@ -164,14 +169,15 @@
                                             <a href="#" class="font-medium text-gray-900">Futurist Labs</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
-                                            Web developer
+                                            GoLang & front-end developer, AWS specialist - Dec. 2016 – Aug. 2017
                                         </p>
                                     </div>
                                     <div class="mt-2  text-gray-700">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam.
+                                            Ranked #1 on Clutch as a mobile development partner, Futurist Labs focuses
+                                            on enterprise and startup mobile apps & web IT development. We partner with
+                                            companies worldwide from California’s Silicon Valley all the way to Sofia,
+                                            Bulgaria — our Eastern European offshore hub.
                                         </p>
                                     </div>
                                 </div>
@@ -194,45 +200,25 @@
                                             <a href="#" class="font-medium text-gray-900">StoreGecko</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
-                                            Team lead & Angular.js developer
+                                            Team lead & Angular.js developer – Oct. 2015 – Sept. 2016
                                         </p>
                                     </div>
                                     <div class="mt-2  text-gray-700">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-aos="fade-left">
-                        <div class="relative pb-8">
-                                <span class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                      aria-hidden="true"></span>
-                            <div class="relative flex items-start space-x-3">
-                                <div class="relative">
-                                    <x-image width="40" height="40"
-                                             class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"
-                                             src="montway.jpg" alt="Montway"/>
-                                </div>
-                                <div class="min-w-0 flex-1">
-                                    <div>
-                                        <div class="text-lg leading-6 font-medium text-gray-900">
-                                            <a href="#" class="font-medium text-gray-900">Montway</a>
-                                        </div>
-                                        <p class="mt-0.5  text-gray-500">
-                                            Frontend developer
-                                        </p>
-                                    </div>
-                                    <div class="mt-2  text-gray-700">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam.
-                                        </p>
+                                        <p class="mb-3">StoreGecko is a Bulgarian startup, which was established in
+                                            early 2014. The company develops a product management system for web stores
+                                            developed by Magento.</p>
+                                        <p><strong>Key Qualifications &amp; Responsibilities</strong></p>
+                                        <ul class="list-disc list-inside">
+                                            <li>Management of the development team</li>
+                                            <li>Development of the front-end of the software based on AngularJS</li>
+                                        </ul>
+                                        <p>&nbsp;</p>
+                                        <p><strong>Key Achievements</strong></p>
+                                        <ul class="list-disc list-inside">
+                                            <li>For one year my team made a stable version of the software and started
+                                                working with clients with more than 50&nbsp;000 products
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -254,14 +240,16 @@
                                             <a href="#" class="font-medium text-gray-900">Stenik</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
-                                            Frontend developer
+                                            Back-end developer – Jan 2007 – Jun 2010
                                         </p>
                                     </div>
                                     <div class="mt-2  text-gray-700">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam.
+                                            Since the first months, I started developing a CMS software allowing us to
+                                            quickly build the next projects. The CMS made from scratch became a main
+                                            software for website even in the years after I left the company. In three
+                                            and a half years, we built more than 50 sites with the help of the developed
+                                            CMS.
                                         </p>
                                     </div>
                                 </div>
@@ -283,15 +271,7 @@
                                             <a href="#" class="font-medium text-gray-900">A+</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
-                                            Commented 2h ago
-                                        </p>
-                                    </div>
-                                    <div class="mt-2  text-gray-700">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc
-                                            ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
-                                            cursus quis sed purus nam. Scelerisque amet elit non sit ut tincidunt
-                                            condimentum. Nisl ultrices eu venenatis diam.
+                                            Front-end developer - Feb 2006 - May 2007
                                         </p>
                                     </div>
                                 </div>
