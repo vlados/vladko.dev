@@ -20,7 +20,7 @@ input:invalid, textarea:invalid, select:invalid {
 @tailwind utilities;
 @tailwind screens;
 
-@variants (print) {
+@media print {
     [data-aos^=fade][data-aos^=fade] {
         opacity: 1;
         transform: translateZ(0);
