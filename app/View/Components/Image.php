@@ -33,6 +33,48 @@ class Image extends Component
             $this->defaultAttributes['$height'] = $height;
         }
 
+        $sizedSrcJpg = $pathinfo["filename"] . "-" . $width . "x" . $height . ".jpg";
+        $sizedSrcWebP = $pathinfo["filename"] . "-" . $width . "x" . $height . ".webp";
+        if ($width && $height) {
+            if (!file_exists(public_path("images/sized/" . $sizedSrcJpg))) {
+                if (!file_exists(public_path("images/sized/"))) {
+                    mkdir(public_path("images/sized/"));
+                }
+                \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    ->width($width)
+                    ->height($height)
+                    ->fit(Manipulations::FIT_CONTAIN, $width, $height)
+                    ->crop(Manipulations::CROP_CENTER, $width, $height)
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_JPG)
+                    ->save(public_path("images/sized/" . $sizedSrcJpg));
+                \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    ->width($width)
+                    ->height($height)
+                    ->fit(Manipulations::FIT_CONTAIN, $width, $height)
+                    ->crop(Manipulations::CROP_CENTER, $width, $height)
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_WEBP)
+                    ->save(public_path("images/sized/" . $sizedSrcWebP));
+            }
+        } else {
+            if (!file_exists(public_path("images/sized/" . $sizedSrcJpg))) {
+                if (!file_exists(public_path("images/sized/"))) {
+                    mkdir(public_path("images/sized/"));
+                }
+                \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_JPG)
+                    ->save(public_path("images/sized/" . $sizedSrcJpg));
+                \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_WEBP)
+                    ->save(public_path("images/sized/" . $sizedSrcWebP));
+            }
+
+        }
+        $this->src = asset("images/sized/" . $sizedSrcJpg);
+        $this->src_webp = asset("images/sized/" . $sizedSrcWebP);
     }
 
     /**
