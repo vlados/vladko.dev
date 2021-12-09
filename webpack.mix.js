@@ -2,7 +2,6 @@ const mix = require("laravel-mix");
 
 require("laravel-mix-tailwind");
 require('laravel-mix-blade-reload');
-require('laravel-mix-imagemin');
 
 /*
  |--------------------------------------------------------------------------
