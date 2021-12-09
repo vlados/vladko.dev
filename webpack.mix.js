@@ -14,6 +14,7 @@ require('laravel-mix-imagemin');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.ts('./vendor/wireui/wireui/ts/index.ts', './public/js/wireui.js')
 
 mix.js("resources/js/app.js", "public/js/app.js")
     .sass("resources/sass/app.scss", "public/css/app.css")

@@ -13,7 +13,13 @@ class HomeController extends Controller
 {
     function index()
     {
-        $faq = Question::orderBy("order")->get();
+        $faq = _cache("faq", function () {
+            return Question::orderBy("order")->get();
+        }, 60 * 24);
+        $projects = _cache("projects", function () {
+            return Project::all();
+        }, 60 * 24);
+
         JsonLd::addValues([
             'name' => 'Vladislav Stoitsov - full-stack web developer', // set false to total remove
             'description' => 'Full-stack web developer with more than 16 years of experience leading both front-end and back-end development', // set false to total remove
@@ -54,7 +60,6 @@ class HomeController extends Controller
         ]);
 
 
-        $projects = Project::all();
         return view('welcome')->with([
             "faq" => $faq,
             "projects" => $projects

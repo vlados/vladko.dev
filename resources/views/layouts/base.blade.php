@@ -14,7 +14,8 @@
     @unlessbot
         <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
         @livewireStyles
-        <wireui:scripts/>
+        <script>window.Wireui = {hook(hook, callback) {window.addEventListener(`wireui:${hook}`, () => callback())},dispatchHook(hook) {window.dispatchEvent(new Event(`wireui:${hook}`))}}</script>
+        <script src="{{ url(mix('js/wireui.js')) }}"></script>
     @endbot
 
 

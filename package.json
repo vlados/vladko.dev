@@ -26,11 +26,16 @@
         "@fancyapps/ui": "^4.0.10",
         "aos": "^2.3.4",
         "css-scroll-snap-polyfill": "^0.1.2",
+        "dayjs": "^1.10.7",
         "laravel-mix-blade-reload": "^3.0.0",
         "laravel-mix-imagemin": "^1.0.3",
+        "lodash": "^4.17.21",
+        "lodash.kebabcase": "^4.1.1",
         "rough-notation": "^0.5.1",
         "sweetalert2": "^10.0.0",
         "tailwindcss-break": "^1.0.0",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.5.2",
         "typewriter-effect": "^2.18.2"
     }
 }
