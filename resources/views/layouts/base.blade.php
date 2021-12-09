@@ -14,7 +14,9 @@
             <style>{{ file_get_contents(base_path('public/css/critical.min.css')) }}</style>
         @endif
         <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    @elsebot
+        <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    @endbot
+    @unlessbot
         <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
         @livewireStyles
         <script>window.Wireui = {hook(hook, callback) {window.addEventListener(`wireui:${hook}`, () => callback())},dispatchHook(hook) {window.dispatchEvent(new Event(`wireui:${hook}`))}}</script>
