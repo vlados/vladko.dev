@@ -33,7 +33,7 @@ return [
                 'purpose' => 'maskable'
             ],
             [
-                'path' => '/resources/images/SVG/vladko-logo.svg',
+                'path' => '/images/SVG/vladko-logo.svg',
                 'sizes' => 'any',
                 'type' => 'image/svg',
                 'purpose' => 'any'

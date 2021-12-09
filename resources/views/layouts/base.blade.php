@@ -3,20 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-{!! SEOMeta::generate() !!}
-{!! OpenGraph::generate() !!}
-{!! Twitter::generate() !!}
-{!! JsonLd::generate() !!}
+{!! SEO::generate() !!}
 
 <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
-    @livewireStyles
-    <wireui:scripts/>
+    <link rel="prefetch" type="text/css" href="{{ asset(mix('css/app.css')) }}">
+    <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+    @unlessbot
+        <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
+        @livewireStyles
+        <wireui:scripts/>
+    @endbot
     <!-- Scripts -->
-    <script src="{{ url(mix('js/app.js')) }}" defer></script>
+    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
 
 
     <!-- CSRF Token -->
@@ -26,6 +27,7 @@
 </head>
 
 <body class="antialiased bg-gray-50 print:bg-white min-h-screen">
+@unlessbot
 
 <div
     class="fixed inset-0 backdrop-blur-2xl bg-white white flex justify-center items-center z-50 bg-opacity-50 flex-col ease-linear"
@@ -36,14 +38,13 @@
     <x-logo height="60" width="60" class="fill-current ml-2 animate-spin duration-2000" middle="text-gray-400"/>
     <div class="text-base text-gray-600 font-semibold mt-5">Loading ...</div>
 </div>
+@endbot
 @yield('body')
 
+
+@unlessbot
 @livewireScripts
-
-<!-- livewire alert -->
 <x-livewire-alert::scripts/>
-<!-- livewire alert end -->
-
 <button x-data="scrollToTop" x-show="visible" @click="click" type="button"
         class=" print:hidden inline-flex items-center p-3 rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 fixed bottom-0 right-0 mr-10 mb-10 z-50 border-2 border-white shadow-lg"
         x-transition:enter="transition ease-out duration-200"
@@ -56,7 +57,7 @@
     <!-- Heroicon name: outline/plus-sm -->
     <x-icon name="arrow-up" class="h-6 w-6"/>
 </button>
-
+@endbot
 
 </body>
 </html>

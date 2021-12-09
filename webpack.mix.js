@@ -17,6 +17,7 @@ require('laravel-mix-imagemin');
 
 mix.js("resources/js/app.js", "public/js/app.js")
     .sass("resources/sass/app.scss", "public/css/app.css")
+    .sass("resources/sass/fonts.scss", "public/css/fonts.css")
     .tailwind("./tailwind.config.js")
     .copy(
         'resources/images/',
