@@ -45,14 +45,14 @@
         </nav>
     </div>
 
-    <div x-show="open" class="fixed inset-0 flex z-40 md:hidden" style="display: none"
+    <div x-show="open" class="fixed inset-0 flex z-40 min-h-screen md:hidden" style="display: none"
          x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state." x-ref="dialog"
          aria-modal="true">
 
         <div x-show="open" x-transition:enter="transition-opacity ease-linear duration-300"
              x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
              x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100"
-             x-transition:leave-end="opacity-0" class="fixed inset-0 bg-gray-600 bg-opacity-75"
+             x-transition:leave-end="opacity-0" class="fixed inset-0 bg-gray-600 bg-opacity-75  min-h-screen"
              x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." @click="open = false"
              aria-hidden="true">
         </div>
@@ -85,19 +85,19 @@
             <nav class="px-3 flex h-full space-y-1 flex-col align-middle justify-center text-center items-center"
                  @click="open=false">
                 <a href="#about"
-                   class="text-indigo-100 w-full text-center group px-2 py-2 text-base font-medium rounded-md">About
+                   class="text-indigo-100 w-full text-center group px-2 py-2 text-xl font-medium rounded-md">About
                     me</a>
                 <a href="#skills"
-                   class="text-indigo-100 w-full text-center group px-2 py-2 text-base font-medium rounded-md">Skills</a>
+                   class="text-indigo-100 w-full text-center group px-2 py-2 text-xl font-medium rounded-md">Skills</a>
                 <a href="#experience"
-                   class="text-indigo-100 w-full text-center group px-2 py-2 text-base font-medium rounded-md">Experience</a>
+                   class="text-indigo-100 w-full text-center group px-2 py-2 text-xl font-medium rounded-md">Experience</a>
                 @if (count($projects))
                     <a href="#projects"
-                       class="text-indigo-100 w-full text-center group px-2 py-2 text-base font-medium rounded-md">Latest
+                       class="text-indigo-100 w-full text-center group px-2 py-2 text-xl font-medium rounded-md">Latest
                         projects</a>
                 @endif
                 <a href="#contact"
-                   class="text-indigo-100 w-full text-center group px-2 py-2 text-base font-medium rounded-md">Contact</a>
+                   class="text-indigo-100 w-full text-center group px-2 py-2 text-xl font-medium rounded-md">Contact</a>
 
             </nav>
         </div>
