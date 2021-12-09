@@ -1,12 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-    mode: `jit`,
-    presets: [
-        require('./vendor/wireui/wireui/tailwind.config.js')
-    ],
+    darkMode: null,
     theme: {
-
         container: {
             screens: {
                 'print': {'raw': 'print'},
@@ -17,19 +14,20 @@ module.exports = {
             }
         },
         extend: {
+            fontSize: {
+                '2xs': '.5rem'
+            },
+            spacing: {
+                '4.5': '1.13rem'
+            },
             colors: {
-                'sand': {
-                    '50': '#fffefe',
-                    '100': '#fffefd',
-                    '200': '#fefcfb',
-                    '300': '#fdfbf8',
-                    '400': '#fcf7f3',
-                    '500': '#faf4ee',
-                    '600': '#e1dcd6',
-                    '700': '#bcb7b3',
-                    '800': '#96928f',
-                    '900': '#7b7875'
-                }
+                blueGray: colors.slate,
+                primary: colors.indigo,
+                secondary: colors.gray,
+                positive: colors.emerald,
+                negative: colors.red,
+                warning: colors.amber,
+                info: colors.blue,
             },
 
             animation: {
@@ -71,22 +69,18 @@ module.exports = {
             backgroundColor: ['active'],
         }
     },
-    purge: {
-        content: [
-            './vendor/wireui/wireui/resources/**/*.blade.php',
-            './vendor/wireui/wireui/ts/**/*.ts',
-            './vendor/wireui/wireui/src/View/**/*.php',
-            './app/**/*.php',
-            './resources/**/*.js',
-            './resources/**/*.php',
-        ],
-        options: {
-            defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
-            whitelistPatterns: [/-active$/, /-enter$/, /-leave-to$/, /show$/],
-        },
-    },
+    content: [
+        './vendor/wireui/wireui/resources/**/*.blade.php',
+        './vendor/wireui/wireui/ts/**/*.ts',
+        './vendor/wireui/wireui/src/View/**/*.php',
+        './app/**/*.php',
+        './resources/**/*.js',
+        './resources/**/*.php',
+    ],
     plugins: [
-        require('@tailwindcss/forms'),
+        require("@tailwindcss/forms")({
+            strategy: 'class',
+        }),
         require('@tailwindcss/typography'),
 
     ],
