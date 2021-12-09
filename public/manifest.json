@@ -21,34 +21,16 @@
     },
     "icons": [
         {
-            "src": "/images/pwa/manifest-icon-192.maskable.png",
+            "src": "/images/pwa/maskable_icon_x192.png",
             "type": "image/png",
             "sizes": "192x192",
-            "purpose": "any"
+            "purpose": "any maskable"
         },
         {
-            "src": "/images/pwa/manifest-icon-512.maskable.png",
+            "src": "/images/pwa/maskable_icon_x512.png",
             "type": "image/png",
             "sizes": "512x512",
-            "purpose": "any"
-        },
-        {
-            "src": "/images/pwa/manifest-icon-192.maskable.png",
-            "type": "image/png",
-            "sizes": "192x192",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/images/pwa/manifest-icon-512.maskable.png",
-            "type": "image/png",
-            "sizes": "512x512",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/images/SVG/vladko-logo.svg",
-            "type": "image/svg",
-            "sizes": "any",
-            "purpose": "any"
+            "purpose": "any maskable"
         }
     ]
 }
