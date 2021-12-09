@@ -3,8 +3,8 @@
     "short_name": "vladko.dev",
     "start_url": "https://www.vladko.dev/?pwa=1",
     "display": "standalone",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "none",
+    "background_color": "none",
     "orientation": "any",
     "status_bar": "#ffffff",
     "splash": {
