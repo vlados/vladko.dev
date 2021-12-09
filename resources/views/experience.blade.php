@@ -22,7 +22,7 @@
                                 <div class="min-w-0 flex-1">
                                     <div>
                                         <div class="text-lg leading-6 font-medium text-gray-900">
-                                            <a href="#" class="font-medium text-gray-900">Udoma.bg</a>
+                                            <a target="_blank" href="https://www.udoma.bg/" class="font-medium link">Udoma.bg</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
                                             CEO, Web developer, designer, SEO
@@ -73,7 +73,7 @@
                                 <div class="min-w-0 flex-1 ">
                                     <div class=" text-gray-500">
                                         Co-founded
-                                        <a href="#" class="font-medium text-gray-900">Free Access to the Real Estate
+                                        <a target="_blank" href="https://www.udoma.bg/" class="font-medium link">Free Access to the Real Estate
                                             Market in Bulgaria</a>
                                         <span
                                             class="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5  ml-2">
@@ -124,7 +124,7 @@
                                 <div class="min-w-0 flex-1">
                                     <div class=" text-gray-500">
                                         Co-founded
-                                        <a href="#" class="font-medium text-gray-900">Bulgarian Association for Electric
+                                        <a target="_blank" href="https://baem.bg/" class="font-medium link">Bulgarian Association for Electric
                                             Mobility</a>
                                         <span
                                             class="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5  ml-2">
@@ -166,7 +166,7 @@
                                 <div class="min-w-0 flex-1">
                                     <div>
                                         <div class="text-lg leading-6 font-medium text-gray-900">
-                                            <a href="#" class="font-medium text-gray-900">Futurist Labs</a>
+                                            <a rel="nofollow noreferrer" target="_blank" href="https://futurist-labs.com/" class="font-medium link">Futurist Labs</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
                                             GoLang & front-end developer, AWS specialist - Dec. 2016 – Aug. 2017
@@ -197,7 +197,9 @@
                                 <div class="min-w-0 flex-1">
                                     <div>
                                         <div class="text-lg leading-6 font-medium text-gray-900">
-                                            <a href="#" class="font-medium text-gray-900">StoreGecko</a>
+                                            <a  rel="nofollow noreferrer" target="_blank" href="https://web.archive.org/web/20151231071858/https://www.storegecko.com/" class="font-medium link">StoreGecko</a>
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-red-200 text-red-800 ml-2">Failed</span>
+                                            <svg class="w-4 stroke-2 fill-current text-red-500 h-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.0.0-beta1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M255.9 335.9c-31.24 0-60.47 13.83-80.57 37.83c-5.691 6.875-4.723 17 2.059 22.5c6.781 5.625 16.83 4.875 22.52-2c27.85-33.38 84.16-33.38 112 0c5.328 6.5 15.5 8 22.52 2c6.781-5.625 7.75-15.75 2.059-22.5C316.5 349.8 287.2 335.9 255.9 335.9zM200 240c0-3.812-1.08-7.289-2.662-10.49C202.9 231.2 204.8 232 208 232c6.875 0 13.3-4.445 15.36-11.38c2.562-8.453-2.294-17.34-10.76-19.89l-79.94-24C124.3 174.3 115.3 178.9 112.7 187.4C110.2 195.8 115 204.7 123.5 207.3l40.68 12.29C157 223.7 152 231.1 152 240c0 13.25 10.75 24 24 24S200 253.3 200 240zM379.5 176.7l-80.03 24c-8.469 2.547-13.23 11.43-10.67 19.89C290.8 227.6 297.2 232 304.1 232c3.23 0 5.2-.8711 10.61-2.492C313.1 232.7 312 236.2 312 240c0 13.25 10.75 24 24 24s24-10.75 24-24c0-8.863-5.029-16.29-12.18-20.44l40.77-12.29c8.469-2.547 13.33-11.43 10.76-19.89C396.8 178.9 387.9 174.3 379.5 176.7zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 480c-123.5 0-224-100.5-224-224s100.5-224 224-224s224 100.5 224 224S379.5 480 256 480z"/></svg>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
                                             Team lead & Angular.js developer – Oct. 2015 – Sept. 2016
@@ -207,6 +209,7 @@
                                         <p class="mb-3">StoreGecko is a Bulgarian startup, which was established in
                                             early 2014. The company develops a product management system for web stores
                                             developed by Magento.</p>
+                                        <p class="mb-3">I'm grateful, and it was a pleasure to work with such a talented team. I've learned a very important lesson - no matter how great idea you have, if you are not ready to listen to your clients, the team and the market - you will almost certainly fail!  </p>
                                         <p><strong>Key Qualifications &amp; Responsibilities</strong></p>
                                         <ul class="list-disc list-inside">
                                             <li>Management of the development team</li>
@@ -237,7 +240,7 @@
                                 <div class="min-w-0 flex-1">
                                     <div>
                                         <div class="text-lg leading-6 font-medium text-gray-900">
-                                            <a href="#" class="font-medium text-gray-900">Stenik</a>
+                                            <a rel="nofollow noreferrer" target="_blank" href="https://www.stenikgroup.com/bg/" class="font-medium link">Stenik</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
                                             Back-end developer – Jan 2007 – Jun 2010
@@ -268,7 +271,7 @@
                                 <div class="min-w-0 flex-1">
                                     <div>
                                         <div class="">
-                                            <a href="#" class="font-medium text-gray-900">A+</a>
+                                            <a rel="nofollow noreferrer" target="_blank" href="https://www.aplus.net/" class="font-medium link">A+</a>
                                         </div>
                                         <p class="mt-0.5  text-gray-500">
                                             Front-end developer - Feb 2006 - May 2007

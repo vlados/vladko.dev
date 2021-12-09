@@ -57,6 +57,9 @@ input:invalid, textarea:invalid, select:invalid {
     .animation-delay-4000 {
         animation-delay: 4s;
     }
+    a.link {
+        @apply text-gray-900 hover:underline hover:decoration-2 hover:decoration-indigo-500;
+    }
 }
 
 @layer components {
