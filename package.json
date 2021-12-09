@@ -25,8 +25,10 @@
     "dependencies": {
         "@fancyapps/ui": "^4.0.10",
         "aos": "^2.3.4",
+        "critical": "^4.0.1",
         "css-scroll-snap-polyfill": "^0.1.2",
         "dayjs": "^1.10.7",
+        "dotenv": "^10.0.0",
         "laravel-mix-blade-reload": "^3.0.0",
         "laravel-mix-imagemin": "^1.0.3",
         "lodash": "^4.17.21",

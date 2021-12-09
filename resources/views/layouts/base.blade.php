@@ -9,13 +9,18 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Styles -->
-    <link rel="prefetch" type="text/css" href="{{ asset(mix('css/app.css')) }}">
-    <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
-    @unlessbot
+    @bot
+        @if(file_exists(base_path('public/css/critical.min.css')))
+            <style>{{ file_get_contents(base_path('public/css/critical.min.css')) }}</style>
+        @endif
+        <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    @elsebot
         <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
         @livewireStyles
         <script>window.Wireui = {hook(hook, callback) {window.addEventListener(`wireui:${hook}`, () => callback())},dispatchHook(hook) {window.dispatchEvent(new Event(`wireui:${hook}`))}}</script>
         <script src="{{ url(mix('js/wireui.js')) }}"></script>
+        <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style">
+        <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     @endbot
 
 
