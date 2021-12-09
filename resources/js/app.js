@@ -62,7 +62,8 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('typewriter', ($el) => ({
         init: function () {
             new Typewriter($el, {
-                strings: ['open-source evangelist', 'web designer', 'SEO expert', 'security expert', 'entrepreneur'],
+                strings: ['Full-stack web developer','open-source evangelist', 'web designer', 'SEO expert', 'security expert', 'entrepreneur'],
+                delay: 75,
                 autoStart: true,
                 loop: true
             });

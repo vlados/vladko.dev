@@ -9,28 +9,34 @@ return [
         'background_color' => '#ffffff',
         'theme_color' => '#ffffff',
         'display' => 'standalone',
-        'orientation'=> 'any',
-        'status_bar'=> '#ffffff',
+        'orientation' => 'any',
+        'status_bar' => '#ffffff',
         'icons' => [
             [
                 'path' => '/images/pwa/manifest-icon-192.maskable.png',
-                'sizes'=> '192x192',
+                'sizes' => '192x192',
                 'purpose' => 'any'
             ],
             [
                 'path' => '/images/pwa/manifest-icon-512.maskable.png',
-                'sizes'=> '512x512',
+                'sizes' => '512x512',
                 'purpose' => 'any'
             ],
             [
                 'path' => '/images/pwa/manifest-icon-192.maskable.png',
-                'sizes'=> '192x192',
+                'sizes' => '192x192',
                 'purpose' => 'maskable'
             ],
             [
                 'path' => '/images/pwa/manifest-icon-512.maskable.png',
-                'sizes'=> '512x512',
+                'sizes' => '512x512',
                 'purpose' => 'maskable'
+            ],
+            [
+                'path' => '/resources/images/SVG/vladko-logo.svg',
+                'sizes' => 'any',
+                'type' => 'image/svg',
+                'purpose' => 'any'
             ],
         ],
         'splash' => [

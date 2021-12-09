@@ -1,5 +1,5 @@
 <div class=" py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24 section print:hidden">
-    <a class="anchor" id="contact"></a>
+    <span class="anchor" id="contact"></span>
 
     <div class="relative max-w-xl mx-auto">
 

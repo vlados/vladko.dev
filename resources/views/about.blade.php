@@ -1,7 +1,7 @@
 <div class="pt-16 lg:pt-20 pb-0 section print:pt-0 page-break" x-data="highlight()" x-init="show()">
     <div class="container mx-auto space-y-8">
         <div class="text-base max-w-prose mx-auto lg:max-w-none z-20 relative">
-            <a class="anchor" id="about"></a>
+            <span class="anchor" id="about"></span>
             <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl print:hidden">About me</h2>
         </div>
         <div class="lg:grid lg:grid-cols-2 lg:gap-20 lg:items-start">

@@ -1,5 +1,5 @@
 <div class="container mx-auto py-16 lg:py-20 section print:mt-16    ">
-    <a class="anchor" id="experience"></a>
+    <span class="anchor" id="experience"></span>
     <div class="lg:grid lg:grid-cols-3 lg:gap-8">
         <div>
             <h2 class="text-3xl font-extrabold text-gray-900">

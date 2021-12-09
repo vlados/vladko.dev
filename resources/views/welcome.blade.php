@@ -3,19 +3,18 @@
 @section('content')
 
     <div class="relative  overflow-hidden" id="top">
-        <a class="anchor" id="top"></a>
+        <span class="anchor" id="top"></span>
         <div class="relative pt-6">
             @include('layouts.header')
             <main class="container mx-auto ">
                 <div class="relative overflow-hidden rounded-2xl print:rounded-none print:py-0 print:bg-white print:border-0 py-10 bg-gray-100 border border-gray-300 border-dashed px-5 lg:py-28 mt-10 print:p-0">
                     <div class="max-w-4xl mx-auto relative text-center z-20 print:w-full print:text-left">
-                        <p class="sub-title print:text-left">
+                        <p class="sub-title print:text-left text-sm"  x-data="typewriter($el)">
                             Full-stack web developer
                         </p>
 
                         <h1 class="px-0 pt-0 pb-6 m-0 text-4xl font-bold tracking-tight text-center text-gray-900 align-baseline border-0 box-border xl:text-5xl xl:tracking-normal md:text-4xl md:pb-8 md:tracking-tight print:hidden">
-                            <span class="md:block">I am Vladislav Stoitsov, a</span>
-                            <span class="text-indigo-500 md:block" x-data="typewriter($el)">web developer</span>
+                            <span class="md:block">I am Vladislav Stoitsov</span>
                         </h1>
                         <h1 class="px-0 pt-0 pb-6 m-0 text-4xl font-bold tracking-tight text-center text-gray-900 align-baseline border-0 box-border xl:text-5xl xl:tracking-normal md:text-4xl md:pb-8 md:tracking-tight print:block hidden print:text-left print:relative">
                             <span class="md:block">Vladislav Stoitsov</span>

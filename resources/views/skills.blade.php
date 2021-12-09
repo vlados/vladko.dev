@@ -1,6 +1,6 @@
 <div class="container mx-auto py-16 lg:py-20 relative overflow-hidden section ">
     <div class="relative">
-        <a class="anchor" id="skills"></a>
+        <span class="anchor" id="skills"></span>
         <div class=" print:hidden absolute text-8xl font-extrabold text-gray-200 opacity-50 z-auto text-center w-full inset-0 flex justify-center items-center">TECHNOLOGY</div>
         <div class=" print:hidden relative sub-title">What I've learned over the years</div>
         <h2 class="mb-10 mt-0 z-20 relative">
