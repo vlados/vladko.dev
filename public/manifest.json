@@ -3,8 +3,8 @@
     "short_name": "vladko.dev",
     "start_url": "https://www.vladko.dev/?pwa=1",
     "display": "standalone",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "none",
+    "background_color": "none",
     "orientation": "any",
     "status_bar": "#ffffff",
     "splash": {
@@ -21,27 +21,33 @@
     },
     "icons": [
         {
-            "src": "/images/pwa/maskable_icon_x192.png",
-            "type": "image/png",
-            "sizes": "192x192",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/images/pwa/maskable_icon_x512.png",
-            "type": "image/png",
-            "sizes": "512x512",
-            "purpose": "maskable"
-        },
-        {
-            "src": "/images/pwa/maskable_icon_x192.png",
+            "src": "/images/pwa/manifest-icon-192.maskable.png",
             "type": "image/png",
             "sizes": "192x192",
             "purpose": "any"
         },
         {
+            "src": "/images/pwa/manifest-icon-512.maskable.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/pwa/maskable_icon_x192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
             "src": "/images/pwa/maskable_icon_x512.png",
             "type": "image/png",
             "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/SVG/vladko-logo.svg",
+            "type": "image/svg",
+            "sizes": "any",
             "purpose": "any"
         }
     ]
