@@ -24,7 +24,7 @@
 
 </head>
 
-<body class="antialiased bg-gray-50 print:bg-white min-h-screen">
+<body class="antialiased bg-gray-50 print:bg-white min-h-screen" x-data="scrollToTop">
 @unlessbot
 
 <div
@@ -43,7 +43,7 @@
 @unlessbot
 @livewireScripts
 <x-livewire-alert::scripts/>
-<button x-data="scrollToTop" x-show="visible" @click="click" type="button"
+<button x-show="visibleScrollToTop" @click="clickTop" type="button"
         class=" print:hidden inline-flex items-center p-3 rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 fixed bottom-0 right-0 mr-10 mb-10 z-50 border-2 border-white shadow-lg"
         x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="opacity-0 transform scale-0 translate-y-32"

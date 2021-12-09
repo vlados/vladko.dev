@@ -4,9 +4,9 @@
 
     <div class="relative  overflow-hidden" id="top">
         <span class="anchor" id="top"></span>
-        <div class="relative pt-6">
+        <div class="relative pt-6 mt-5">
             @include('layouts.header')
-            <main class="container mx-auto ">
+            <main class="container mx-auto">
                 <div class="relative overflow-hidden rounded-2xl print:rounded-none print:py-0 print:bg-white print:border-0 py-10 bg-gray-100 border border-gray-300 border-dashed px-5 lg:py-28 mt-10 print:p-0">
                     <div class="max-w-4xl mx-auto relative text-center z-20 print:w-full print:text-left">
                         <p class="sub-title print:text-left text-sm"  x-data="typewriter($el)">

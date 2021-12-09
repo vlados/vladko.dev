@@ -85,23 +85,19 @@ document.addEventListener('alpine:init', () => {
         }
     }));
     Alpine.data('scrollToTop', () => ({
-        visible: false,
+        visibleScrollToTop: false,
         init: function () {
             window.addEventListener("scroll", () => {
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    this.visible = true;
+                if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+                    this.visibleScrollToTop = true;
                 } else {
-                    this.visible = false;
-                }
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    this.visible = true;
-                } else {
-                    this.visible = false;
+                    this.visibleScrollToTop = false;
                 }
             })
         },
-        click: function () {
+        clickTop: function () {
             document.body.scrollTop = 0; // For Safari
+            document.location.hash = "";
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     }));

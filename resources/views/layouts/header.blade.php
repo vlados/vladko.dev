@@ -1,4 +1,6 @@
-<header x-data="{ open: false }" @keydown.window.escape="open = false" class="print:hidden">
+<header x-data="{ open: false }" @keydown.window.escape="open = false" class="print:hidden fixed top-0 items-center w-full top-0 py-3 transition-all z-50 bg-gray-50 backdrop-blur-md bg-opacity-70 backdrop-grayscale backdrop-filter"
+        :class="{'shadow-md': visibleScrollToTop }"
+>
     <div class="container mx-auto px-8">
         <nav class="relative flex items-center justify-between sm:h-10 md:justify-center"
              aria-label="Global">
