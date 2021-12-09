@@ -1,5 +1,7 @@
 <?php
 
+use Msurguy\Honeypot\HoneypotServiceProvider;
+
 return [
 
     /*

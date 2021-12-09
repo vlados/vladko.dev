@@ -33,6 +33,7 @@
         </div>
         <div class="mt-12">
             <form wire:submit.prevent="submit" class="gap-6 space-y-6">
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <x-input label="First Name" placeholder="First Name" wire:model.defer="first_name" />
                     <x-input label="Last Name" placeholder="Last Name" wire:model.defer="last_name"/>

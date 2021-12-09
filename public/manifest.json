@@ -1,0 +1,54 @@
+{
+    "name": "vladko.dev",
+    "short_name": "vladko.dev",
+    "start_url": "https://www.vladko.dev/?pwa=1",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "orientation": "any",
+    "status_bar": "#ffffff",
+    "splash": {
+        "640x1136": "/images/pwa/apple-splash-640-1136.png",
+        "750x1334": "/images/pwa/apple-splash-750-1334.png",
+        "828x1792": "/images/pwa/apple-splash-828-1792.png",
+        "1125x2436": "/images/pwa/apple-splash-1125-2436.png",
+        "1242x2208": "/images/pwa/apple-splash-1242-2208.png",
+        "1242x2688": "/images/pwa/apple-splash-1242-2688.png",
+        "1536x2048": "/images/pwa/apple-splash-1536-2048.png",
+        "1668x2224": "/images/pwa/apple-splash-1668-2224.png",
+        "1668x2388": "/images/pwa/apple-splash-1668-2388.png",
+        "2048x2732": "/images/pwa/apple-splash-2048-2732.png"
+    },
+    "icons": [
+        {
+            "src": "/images/pwa/manifest-icon-192.maskable.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/pwa/manifest-icon-512.maskable.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/pwa/manifest-icon-192.maskable.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/pwa/manifest-icon-512.maskable.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/SVG/vladko-logo.svg",
+            "type": "image/svg",
+            "sizes": "any",
+            "purpose": "any"
+        }
+    ]
+}

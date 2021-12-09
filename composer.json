@@ -22,7 +22,8 @@
         "silviolleite/laravelpwa": "^2.0",
         "spatie/image": "^1.0",
         "spatie/laravel-medialibrary": "9.8.2",
-        "wireui/wireui": "^0.14.1"
+        "wireui/wireui": "^0.14.1",
+        "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
