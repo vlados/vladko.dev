@@ -43,7 +43,7 @@
                         class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20 overflow-hidden">
                         <!-- Testimonial card-->
                         <div class="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden" data-aos="zoom-out">
-                            <x-image width="560" height="430" src="baby1.jpg"
+                            <x-image width="560" height="430" src="baby1.jpg" alt="Vladislav & Tsvetan Stoitsov - 2021"
                                      class="absolute inset-0 h-full w-full object-cover"/>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-indigo-600 opacity-80"></div>

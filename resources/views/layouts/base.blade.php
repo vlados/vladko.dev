@@ -16,8 +16,6 @@
         @livewireStyles
         <wireui:scripts/>
     @endbot
-    <!-- Scripts -->
-    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
 
 
     <!-- CSRF Token -->
@@ -58,6 +56,8 @@
     <x-icon name="arrow-up" class="h-6 w-6"/>
 </button>
 @endbot
+<!-- Scripts -->
+<script src="{{ asset(mix('js/app.js')) }}" defer></script>
 
 </body>
 </html>

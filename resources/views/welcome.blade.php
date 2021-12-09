@@ -63,22 +63,22 @@
                     </p>
                     <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:mt-8 gap-0.5">
                         <div class="flex justify-center py-8 px-8">
-                            <x-image class="max-h-12" src="abb.png"/>
+                            <x-image class="max-h-12" src="abb.png" width="121" height="48" alt="ABB" />
                         </div>
                         <div class="flex justify-center py-8 px-8">
-                            <x-image class="max-h-12" src="hitachi.png"/>
+                            <x-image class="max-h-12" src="hitachi.png"  width="255" height="44" alt="Hitachi" />
                         </div>
                         <div class="flex justify-center py-8 px-8">
-                            <x-image class="max-h-12" src="tsh.png"/>
+                            <x-image class="max-h-12" src="tsh.png" width="105" height="48" alt="The Software House"/>
                         </div>
                         <div class="flex justify-center py-8 px-8">
-                            <x-image class="max-h-12" src="nelas.png"/>
+                            <x-image class="max-h-12" src="nelas.png" width="210" height="48" alt="Nelas"/>
                         </div>
                         <div class="flex justify-center py-8 px-8">
-                            <x-image class="max-h-12" src="galardo.png"/>
+                            <x-image class="max-h-12" src="galardo.png" width="198" height="48" alt="Galardo"/>
                         </div>
                         <div class="flex justify-center py-8 px-8">
-                            <x-image class="max-h-12" src="jcd.png"/>
+                            <x-image class="max-h-12" src="jcd.png"  width="122" height="48" alt="JCDecaux"/>
                         </div>
                     </div>
                 </div>
