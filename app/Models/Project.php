@@ -29,22 +29,50 @@ class Project extends Model implements HasMedia
     function setImagesAttribute() {
 
     }
+    function setVideosAttribute() {
 
-    public function registerMediaConversions(Media $media = null): void
+    }
+
+    public function registerMediaCollections(): void
     {
-        $this->addMediaConversion('thumb')
-            ->format('jpg')
-            ->width(360)
-            ->height(270)
-            ->optimize()
-            ->fit(Manipulations::FIT_CONTAIN, 360, 270)
-            ->crop(Manipulations::CROP_CENTER, 360, 270);
+        // images
+        $this
+            ->addMediaCollection('images')
+            ->registerMediaConversions(function (Media $media) {
+                $this->addMediaConversion('thumb')
+                    ->format('jpg')
+                    ->width(360)
+                    ->height(270)
+                    ->optimize()
+                    ->fit(Manipulations::FIT_CONTAIN, 360, 270)
+                    ->crop(Manipulations::CROP_CENTER, 360, 270);
 
-        $this->addMediaConversion('large')
-            ->format('jpg')
-            ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
-            ->optimize()
-            ->withResponsiveImages();
+                $this->addMediaConversion('large')
+                    ->format('jpg')
+                    ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
+                    ->optimize()
+                    ->withResponsiveImages();
+            });
+        // videos
+        $this
+            ->addMediaCollection('videos')
+            ->registerMediaConversions(function (Media $media) {
+                $this->addMediaConversion('thumb')
+                    ->format('jpg')
+                    ->width(360)
+                    ->height(270)
+                    ->extractVideoFrameAtSecond(10)
+                    ->optimize()
+                    ->fit(Manipulations::FIT_CONTAIN, 360, 270)
+                    ->crop(Manipulations::CROP_CENTER, 360, 270);
+
+                $this->addMediaConversion('large')
+                    ->format('jpg')
+                    ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
+                    ->extractVideoFrameAtSecond(10)
+                    ->optimize()
+                    ->withResponsiveImages();
+            });
     }
 
 }

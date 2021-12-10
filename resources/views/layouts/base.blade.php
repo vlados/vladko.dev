@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     @endbot
 
+    <link rel="icon" href="{{ asset("images/icon.svg")  }}" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset("images/favicon-32x32.png") }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("images/favicon-16x16.png") }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

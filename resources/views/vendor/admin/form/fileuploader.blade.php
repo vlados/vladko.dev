@@ -11,6 +11,7 @@
 <script>
 	$(document).ready(function () {
 		initUploader('#{{ $id }}', {
+            fileMaxSize: {{ min(intval(ini_get("upload_max_filesize")),intval(ini_get("post_max_size"))) }},
 			files: {!! json_encode($value) !!},
 			extensions: {!! json_encode($extensions) !!},
 			url: '{!! $url !!}',

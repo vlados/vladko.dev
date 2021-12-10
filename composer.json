@@ -24,7 +24,8 @@
         "silviolleite/laravelpwa": "^2.0",
         "spatie/image": "^1.0",
         "spatie/laravel-medialibrary": "9.8.2",
-        "wireui/wireui": "^0.14.1"
+        "wireui/wireui": "^0.14.1",
+        "php-ffmpeg/php-ffmpeg": "@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -71,6 +72,9 @@
         "patches": {
             "silviolleite/laravelpwa": {
                 "add-image-sizes": "https://patch-diff.githubusercontent.com/raw/silviolleite/laravel-pwa/pull/53.patch"
+            },
+            "php-ffmpeg/php-ffmpeg": {
+                "doctrine/cache 2.0": "https://github.com/vlados/PHP-FFMpeg/commit/da9b3215c28e321a2ea4a7fdbeb468a3864d8bad.patch"
             }
         }
     },

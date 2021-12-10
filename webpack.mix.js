@@ -24,6 +24,10 @@ mix.js("resources/js/app.js", "public/js/app.js")
         'public/images/'
     )
     .copy(
+        'resources/images/favicon.ico',
+        'public/'
+    )
+    .copy(
         'resources/videos/',
         'public/videos/'
     )
