@@ -13,15 +13,6 @@
     @bot
     <link rel="preload" href="{{ asset(mix('css/critical.css')) }}" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE5Q9Q8M9S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-HE5Q9Q8M9S');
-    </script>
     @endbot
     @unlessbot
     <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
@@ -39,6 +30,18 @@
     <script src="{{ url(mix('js/wireui.js')) }}"></script>
     <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style">
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE5Q9Q8M9S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HE5Q9Q8M9S');
+    </script>
     @endbot
 
     <link rel="icon" href="{{ asset('images/icon.svg') }}" type="image/svg+xml">
