@@ -6,6 +6,7 @@ use App\Models\Project;
 use App\Models\Question;
 use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\JsonLdMulti;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Http\Request;
 
@@ -22,8 +23,8 @@ class HomeController extends Controller
 
         JsonLd::addValues([
             'name' => 'Vladislav Stoitsov - full-stack web developer', // set false to total remove
-            'description' => 'Full-stack web developer with more than 16 years of experience leading both front-end and back-end development', // set false to total remove
-            'url' => url("/"), // Set null for using Url::current(), set false to total remove
+            'description' => 'Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer',
+            'url' => url("/"),
             'type' => 'LocalBusiness',
             "@id" => url('/'),
             "telephone" => "+359876540555",
@@ -58,7 +59,13 @@ class HomeController extends Controller
             'image' => asset('images/vladislav stoitsov.jpg'),
             'logo' => asset('images/SVG/vladko-logo-01.png')
         ]);
-
+        if(isset($_GET['bot']) ||
+        isset($_SERVER['HTTP_USER_AGENT'])
+        && preg_match('/bot|crawl|slurp|spider|mediapartners|Chrome-Lighthouse/i', $_SERVER['HTTP_USER_AGENT'])) {
+            SEOMeta::setTitle("👨‍💻 Vladislav Stoitsov - full-stack web developer");
+        }
+        SEOMeta::setDescription('Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer');
+        SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');
 
         return view('welcome')->with([
             "faq" => $faq,
