@@ -1,59 +1,32 @@
 import Alpine from 'alpinejs';
 import Typewriter from 'typewriter-effect/dist/core';
 import AOS from 'aos';
-import {Fancybox, Carousel, Panzoom} from "@fancyapps/ui/dist/fancybox.umd";
+import {Fancybox} from "@fancyapps/ui/src/Fancybox/Fancybox";
 import {annotate} from 'rough-notation';
-
+import Swal from 'sweetalert2/src/sweetalert2';
 window.Alpine = Alpine;
-window.Swal = require('sweetalert2/dist/sweetalert2')
+window.Swal = Swal
 
 document.addEventListener('alpine:init', () => {
     Fancybox.bind('a[data-fancybox]', {
-        animated: true,
-        showClass: true,
-        hideClass: false,
-
-        closeButton: "top",
         dragToClose: false,
+
+        Toolbar: false,
+        closeButton: "top",
 
         Image: {
             zoom: false,
-            fit: "cover",
         },
-
-        Toolbar: false,
-        Thumbs: false,
-
         Carousel: {
-            Navigation: true,
-            Dots: true,
+            'friction' : 0.8
         },
 
         on: {
-            initLayout: (fancybox) => {
-                // Create main container for left panel and Fancybox carousel
-                const $mainPanel = document.createElement("div");
-                $mainPanel.classList.add("fancybox__main-panel");
-
-                // Create left panel
-                const $leftPanel = document.createElement("div");
-                $leftPanel.classList.add("fancybox__left-panel");
-
-                // $leftPanel.innerHTML = document.getElementById("gallery-data").innerHTML;
-                let element = /(.*)\[([^\]]*)\]/g.exec(fancybox.options.$trigger.dataset['fancybox']);
-                if (document.getElementById(`${element[1]}-data[${element[2]}]`)) {
-                    $leftPanel.innerHTML = document.getElementById(`${element[1]}-data[${element[2]}]`).innerHTML;
-                    $leftPanel.addEventListener('click', function (event) {
-                        event.preventDefault();
-                        return false;
-                    })
-                } else {
-                    console.error(`Cannot find container ${element[1]}-data[${element[2]}]`)
-                }
-                $mainPanel.appendChild($leftPanel);
-                $mainPanel.appendChild(fancybox.$carousel);
-
-                fancybox.$backdrop.after($mainPanel);
+            initCarousel: (fancybox) => {
+                const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+            },
+            "Carousel.change": (fancybox, carousel, to, from) => {
+                const slide = carousel.slides[to];
             },
         },
     });
@@ -62,7 +35,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('typewriter', ($el) => ({
         init: function () {
             new Typewriter($el, {
-                strings: ['Full-stack web developer','open-source evangelist', 'web designer', 'SEO expert', 'security expert', 'entrepreneur'],
+                strings: ['Full-stack web developer', 'open-source evangelist', 'web designer', 'SEO expert', 'security expert', 'entrepreneur'],
                 delay: 75,
                 autoStart: true,
                 loop: true
@@ -101,30 +74,6 @@ document.addEventListener('alpine:init', () => {
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     }));
-    Alpine.data('scrollSpy', ($el) => ({
-        init: function () {
-            var section = document.querySelectorAll(".section h2[id]");
-            var sections = {};
-            var i = 0;
-
-            Array.prototype.forEach.call(section, function (e) {
-                sections[e.id] = getCoords(e).top;
-            });
-
-            console.log(sections)
-            window.onscroll = function () {
-                var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-                for (i in sections) {
-                    if (sections[i] <= scrollPosition) {
-                        console.log('active:' + i);
-                        document.querySelector('.list.active').setAttribute('class', 'list');
-                        document.querySelector('a[href*=' + i + ']').parentElement.setAttribute('class', 'list active');
-                    }
-                }
-            };
-        }
-    }));
 })
 
 function getCoords(elem) { // crossbrowser version
@@ -139,10 +88,10 @@ function getCoords(elem) { // crossbrowser version
     var clientTop = docEl.clientTop || body.clientTop || 0;
     var clientLeft = docEl.clientLeft || body.clientLeft || 0;
 
-    var top  = box.top +  scrollTop - clientTop;
+    var top = box.top + scrollTop - clientTop;
     var left = box.left + scrollLeft - clientLeft;
 
-    return { top: Math.round(top), left: Math.round(left) };
+    return {top: Math.round(top), left: Math.round(left)};
 }
 
 window.scrollSpy = function () {
