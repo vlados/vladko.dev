@@ -1,12 +1,12 @@
 <div class="container relative py-16 mx-auto overflow-hidden lg:py-20 section ">
     <div class="relative">
         <span class="anchor" id="skills"></span>
-        @bot
+        @unlessbot
         <div
-            class="absolute inset-0 z-auto flex items-center justify-center w-full font-extrabold text-center text-gray-200 opacity-50  print:hidden text-8xl">
+            class="absolute inset-0 z-auto flex items-center justify-center w-full font-extrabold text-center text-gray-200 opacity-50 print:hidden text-8xl">
             TECHNOLOGY</div>
         @endbot
-        <div class="relative  print:hidden sub-title">What I've learned over the years</div>
+        <div class="relative print:hidden sub-title">What I've learned over the years</div>
         <h2 class="relative z-20 mt-0 mb-10">
             <span
                 class="block text-3xl font-extrabold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl print:text-left">Skills</span>
