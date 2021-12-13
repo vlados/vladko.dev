@@ -82,7 +82,7 @@
             </a>
 
         </div>
-        <p class="mt-8 text-base text-center text-gray-400">
+        <p class="mt-8 text-base text-center @unlessbot text-gray-400 @endbot">
             &copy; 2004-{{ date('Y') }} {{ config('app.name') }}. All rights reserved.
         </p>
     </div>
