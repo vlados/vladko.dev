@@ -16,6 +16,7 @@ require("laravel-mix-blade-reload");
 mix.ts("./vendor/wireui/wireui/ts/index.ts", "./public/js/wireui.js");
 
 mix.js("resources/js/app.js", "public/js/app.js")
+.js("resources/js/minimal.js", "public/js/")
     .sass("resources/sass/app.scss", "public/css/app.css")
     .sass("resources/sass/critical.scss", "public/css/critical.css")
     .sass("resources/sass/fonts.scss", "public/css/fonts.css")

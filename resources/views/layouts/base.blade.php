@@ -83,7 +83,11 @@
     </button>
     @endbot
     <!-- Scripts -->
+    @bot
+    <script src="{{ asset(mix('js/minimal.js')) }}" defer></script>
+    @else
     <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+    @endbot
 
 </body>
 
