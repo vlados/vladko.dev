@@ -32,9 +32,13 @@ class HomeController extends Controller
             $dates[] = ($commitDate->getTimestamp());
 
             $projectsDate = Project::select("updated_at")->orderBy("updated_at", "desc")->first();
-            $dates[] = ($projectsDate->updated_at->timestamp);
+            if($projectsDate) {
+                $dates[] = ($projectsDate->updated_at->timestamp);
+            }
             $faq = Question::select("updated_at")->orderBy("updated_at", "desc")->first();
-            $dates[] = ($faq->updated_at->timestamp);
+            if($faq) {
+                $dates[] = ($faq->updated_at->timestamp);
+            }
             return Carbon::createFromTimestamp(max($dates))->setTimezone("GMT");
         }, 60 * 24);
 
