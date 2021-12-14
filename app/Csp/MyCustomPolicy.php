@@ -30,6 +30,7 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::SCRIPT, $assets_url)
             ->addDirective(Directive::SCRIPT, Keyword::SELF)
             ->addDirective(Directive::SCRIPT, Keyword::UNSAFE_EVAL)
+            ->addDirective(Directive::SCRIPT, Keyword::UNSAFE_INLINE)
 
             ->addDirective(Directive::SCRIPT, 'https://www.googletagmanager.com')
             ->addDirective(Directive::SCRIPT, 'https://www.google-analytics.com')
