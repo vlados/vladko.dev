@@ -22,6 +22,7 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::DEFAULT, $assets_url)
             ->addDirective(Directive::FORM_ACTION, Keyword::SELF)
             ->addDirective(Directive::IMG, $assets_url)
+            ->addDirective(Directive::IMG, 'https://www.google-analytics.com')
             ->addDirective(Directive::IMG, Keyword::SELF)
             ->addDirective(Directive::MEDIA, $assets_url)
             ->addDirective(Directive::OBJECT, Keyword::NONE)
