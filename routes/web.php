@@ -13,5 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home')
-    ->middleware('cache.headers:public;max_age=2628000;etag');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');

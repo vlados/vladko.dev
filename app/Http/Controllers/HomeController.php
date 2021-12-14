@@ -6,6 +6,7 @@ use App\Models\Project;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Http\Middleware\SetCacheHeaders as Cache;
 use Illuminate\Support\Facades\View;
 use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -90,19 +91,12 @@ class HomeController extends Controller
         SEOMeta::setDescription('Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer');
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');
 
-        $contents = View::make('welcome', [
-            "faq" => $faq,
-            "projects" => $projects
-        ]);
-        $response = Response::make($contents, 200);
-        $response->withHeaders([
-            'Last-modified' => $lastModifiedDate->format('D, d M Y H:i:s \G\M\T'),
-            'Cache-Control'=> 'public, max-age=10800, pre-check=10800',
-            'Pragma' => 'public',
-            'Etag'=>md5($response->getContent()),
-            'Expires' => $lastModifiedDate->addMonth(1)->format('D, d M Y H:i:s \G\M\T')
-        ]);
-        return $response;
+        return (new Cache)->handle(new Request, function () use ($projects, $faq) {
+            return Response::view('welcome', [
+                "faq" => $faq,
+                "projects" => $projects
+            ]);
+        }, 'public;etag;max_age=10800;last_modified='.$lastModifiedDate);
 
     }
 }
