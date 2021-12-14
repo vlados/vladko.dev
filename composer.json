@@ -20,12 +20,13 @@
         "laravel-frontend-presets/tall": "^4.0",
         "laravel/framework": "^8.65",
         "livewire/livewire": "^2.8",
+        "php-ffmpeg/php-ffmpeg": "@dev",
         "sentry/sentry-laravel": "^2.10",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/image": "^1.0",
+        "spatie/laravel-csp": "^2.6",
         "spatie/laravel-medialibrary": "9.8.2",
-        "wireui/wireui": "^0.14.1",
-        "php-ffmpeg/php-ffmpeg": "@dev"
+        "wireui/wireui": "^0.14.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
