@@ -16,8 +16,8 @@
     @endbot
     @unlessbot
     <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
-    @livewireStyles
-    <script>
+    @livewireStyles(['nonce' => csp_nonce() ])
+    <script nonce="{{  csp_nonce() }}">
         window.Wireui = {
             hook(hook, callback) {
                 window.addEventListener(`wireui:${hook}`, () => callback())
@@ -27,19 +27,17 @@
             }
         }
     </script>
-    <script src="{{ url(mix('js/wireui.js')) }}"></script>
+    <script nonce="{{  csp_nonce() }}" src="{{ url(mix('js/wireui.js')) }}"></script>
     <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style">
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE5Q9Q8M9S"></script>
-    <script>
+    <script nonce="{{  csp_nonce() }}" async src="https://www.googletagmanager.com/gtag/js?id=G-HE5Q9Q8M9S"></script>
+    <script  nonce="{{  csp_nonce() }}">
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'G-HE5Q9Q8M9S');
     </script>
     @endbot
@@ -68,7 +66,7 @@
 
 
     @unlessbot
-    @livewireScripts
+    @livewireScripts(['nonce' => csp_nonce() ])
     <x-livewire-alert::scripts />
     <button x-show="visibleScrollToTop" @click="clickTop" type="button"
         class="fixed bottom-0 right-0 z-50 inline-flex items-center p-3 mb-10 mr-10 text-white bg-indigo-600 border-2 border-white rounded-full shadow-lg print:hidden hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -82,11 +80,10 @@
         <x-icon name="arrow-up" class="w-6 h-6" />
     </button>
     @endbot
-    <!-- Scripts -->
     @bot
-    <script src="{{ asset(mix('js/minimal.js')) }}" defer></script>
+    <script nonce="{{ csp_nonce() }}" src="{{ asset(mix('js/minimal.js')) }}" defer></script>
     @else
-    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+    <script nonce="{{ csp_nonce() }}" src="{{ asset(mix('js/app.js')) }}" defer></script>
     @endbot
 
 </body>

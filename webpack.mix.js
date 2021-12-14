@@ -13,7 +13,11 @@ require("laravel-mix-blade-reload");
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.ts("./vendor/wireui/wireui/ts/index.ts", "./public/js/wireui.js");
+mix.copy("./vendor/wireui/wireui/dist/wireui.js", "./public/js/wireui.js");
+mix.webpackConfig({
+    node:false
+});
+
 
 mix.js("resources/js/app.js", "public/js/app.js")
 .js("resources/js/minimal.js", "public/js/")

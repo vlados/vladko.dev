@@ -2,8 +2,9 @@ import Alpine from 'alpinejs';
 import Typewriter from 'typewriter-effect/dist/core';
 import AOS from 'aos';
 import {Fancybox} from "@fancyapps/ui/src/Fancybox/Fancybox";
-import {annotate} from 'rough-notation';
 import Swal from 'sweetalert2/src/sweetalert2';
+import { annotate } from 'rough-notation';
+
 window.Alpine = Alpine;
 window.Swal = Swal
 
@@ -34,9 +35,10 @@ document.addEventListener('alpine:init', () => {
     AOS.init({});
     Alpine.data('typewriter', ($el) => ({
         init: function () {
-            new Typewriter($el, {
+            const t = new Typewriter($el, {
                 strings: ['Full-stack web developer', 'open-source evangelist', 'web designer', 'SEO expert', 'security expert', 'entrepreneur'],
                 delay: 75,
+                skipAddStyles:true,
                 autoStart: true,
                 loop: true
             });
