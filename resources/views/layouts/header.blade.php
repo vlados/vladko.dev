@@ -45,7 +45,7 @@
         </nav>
     </div>
 
-    <div x-show="open" class="fixed inset-0 z-40 flex min-h-screen md:hidden"
+    <div x-show="open" class="fixed inset-0 z-40 flex min-h-screen" x-cloak
          x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state." x-ref="dialog"
          aria-modal="true">
 

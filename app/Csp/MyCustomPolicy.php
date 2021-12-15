@@ -37,9 +37,8 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::CONNECT, 'https://www.google-analytics.com')
 
             ->addDirective(Directive::STYLE, $assets_url)
-            ->addDirective(Directive::STYLE, Keyword::UNSAFE_INLINE)
+            ->addDirective(Directive::STYLE, Keyword::UNSAFE_INLINE);
 
-            ->addNonceForDirective(Directive::SCRIPT);
         if (app()->environment('local')) {
             $this->addDirective(Directive::IMG, 'https://lipsum.app');
             $this->addDirective(Directive::IMG, 'https://images.unsplash.com/');

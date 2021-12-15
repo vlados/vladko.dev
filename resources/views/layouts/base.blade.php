@@ -68,7 +68,7 @@
     @unlessbot
     @livewireScripts(['nonce' => csp_nonce() ])
     <x-livewire-alert::scripts />
-    <button x-show="visibleScrollToTop" @click="clickTop" type="button"
+    <button x-show="visibleScrollToTop" @click="clickTop" type="button" x-cloak
         class="fixed bottom-0 right-0 z-50 inline-flex items-center p-3 mb-10 mr-10 text-white bg-indigo-600 border-2 border-white rounded-full shadow-lg print:hidden hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         x-transition:enter="transition ease-out duration-200"
         x-transition:enter-start="opacity-0 transform scale-0 translate-y-32"

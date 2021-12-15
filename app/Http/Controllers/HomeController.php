@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Models\Question;
+use Illuminate\Http\Middleware\SetCacheHeaders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Middleware\SetCacheHeaders as Cache;
@@ -91,11 +92,16 @@ class HomeController extends Controller
         SEOMeta::setDescription('Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer');
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');
 
-        return (new Cache)->handle(new Request, function () use ($projects, $faq) {
-            return Response::view('welcome', [
+        return (new SetCacheHeaders)->handle(new Request, function () use ($lastModifiedDate, $projects, $faq) {
+            $response = Response::view('welcome', [
                 "faq" => $faq,
                 "projects" => $projects
             ]);
+            $response->header("Last-modified",$lastModifiedDate);
+            if($response->isNotModified(\request())) {
+                $response->setStatusCode(304);
+            }
+            return $response;
         }, 'public;etag;max_age=10800;last_modified='.$lastModifiedDate);
 
     }
