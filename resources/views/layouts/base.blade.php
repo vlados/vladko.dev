@@ -27,7 +27,7 @@
             }
         }
     </script>
-    <script nonce="{{  csp_nonce() }}" src="{{ url(mix('js/wireui.js')) }}"></script>
+    <script nonce="{{  csp_nonce() }}" src="{{ asset(mix('js/wireui.js')) }}"></script>
     <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style">
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
