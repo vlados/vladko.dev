@@ -87,7 +87,7 @@ class HomeController extends Controller
             isset($_SERVER['HTTP_USER_AGENT'])
             && preg_match('/bot|crawl|slurp|spider|mediapartners|Chrome-Lighthouse/i', $_SERVER['HTTP_USER_AGENT'])
         ) {
-            SEOMeta::setTitle("👨‍💻 Vladislav Stoitsov - full-stack web developer");
+            SEOMeta::setTitleDefault("👨‍ Vladislav Stoitsov - full-stack web developer");
         }
         SEOMeta::setDescription('Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer');
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');

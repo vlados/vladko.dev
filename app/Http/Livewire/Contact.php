@@ -37,7 +37,9 @@ class Contact extends Component
     function submit()
     {
         $data = $this->validate();
-        Mail::to('vlados.01@gmail.com')->send(new ContactMail($data));
+        dispatch(function () use ($data) {
+            Mail::to('vlados.01@gmail.com')->send(new ContactMail($data));
+        });
         $this->alert('success', trans('Thank you! I will get back to you as soon as possible!'));
         $this->reset();
     }

@@ -26,7 +26,7 @@
         "spatie/image": "^1.0",
         "spatie/laravel-csp": "^2.6",
         "spatie/laravel-medialibrary": "9.8.2",
-        "wireui/wireui": "^0.14.1"
+        "wireui/wireui": "^0.15.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
