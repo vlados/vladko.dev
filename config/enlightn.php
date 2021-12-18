@@ -18,6 +18,7 @@ return [
     'exclude_analyzers' => [
         \Enlightn\Enlightn\Analyzers\Performance\MinificationAnalyzer::class,
         \Enlightn\Enlightn\Analyzers\Performance\HorizonSuggestionAnalyzer::class,
+        \Enlightn\Enlightn\Analyzers\Security\XSSAnalyzer::class,
     ],
 
     // If you wish to skip running some analyzers in CI mode, list the classes below.
