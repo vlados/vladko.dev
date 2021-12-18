@@ -13,6 +13,7 @@ class Project extends Model implements HasMedia
 {
     use HasFactory;
     use InteractsWithMedia;
+
     protected $fillable = [
         "project_name",
         "description",
@@ -26,10 +27,13 @@ class Project extends Model implements HasMedia
         "release_date" => "date"
     ];
 
-    function setImagesAttribute() {
+    function setImagesAttribute()
+    {
 
     }
-    function setVideosAttribute() {
+
+    function setVideosAttribute()
+    {
 
     }
 
@@ -48,30 +52,30 @@ class Project extends Model implements HasMedia
                     ->crop(Manipulations::CROP_CENTER, 360, 270);
 
                 $this->addMediaConversion('large')
+                    ->withResponsiveImages()
                     ->format('jpg')
                     ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
-                    ->optimize()
-                    ->withResponsiveImages();
+                    ->optimize();
             });
         // videos
         $this
             ->addMediaCollection('videos')
             ->registerMediaConversions(function (Media $media) {
                 $this->addMediaConversion('thumb')
+                    ->extractVideoFrameAtSecond(10)
                     ->format('jpg')
                     ->width(360)
                     ->height(270)
-                    ->extractVideoFrameAtSecond(10)
                     ->optimize()
                     ->fit(Manipulations::FIT_CONTAIN, 360, 270)
                     ->crop(Manipulations::CROP_CENTER, 360, 270);
 
                 $this->addMediaConversion('large')
+                    ->extractVideoFrameAtSecond(10)
+                    ->withResponsiveImages()
                     ->format('jpg')
                     ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
-                    ->extractVideoFrameAtSecond(10)
-                    ->optimize()
-                    ->withResponsiveImages();
+                    ->optimize();
             });
     }
 

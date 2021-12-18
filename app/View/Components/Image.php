@@ -42,21 +42,24 @@ class Image extends Component
                     if (!file_exists(public_path("images/sized/"))) {
                         mkdir(public_path("images/sized/"));
                     }
-                    \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
+                    $image
                         ->width($width)
                         ->height($height)
                         ->fit(Manipulations::FIT_CONTAIN, $width, $height)
                         ->crop(Manipulations::CROP_CENTER, $width, $height)
                         ->optimize()
-                        ->format(Manipulations::FORMAT_JPG)
-                        ->save(public_path("images/sized/" . $sizedSrcJpg));
-                    \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                        ->format(Manipulations::FORMAT_JPG);
+                    $image->save(public_path("images/sized/" . $sizedSrcJpg));
+                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
+                    $image
                         ->width($width)
                         ->height($height)
                         ->fit(Manipulations::FIT_CONTAIN, $width, $height)
                         ->crop(Manipulations::CROP_CENTER, $width, $height)
                         ->optimize()
-                        ->format(Manipulations::FORMAT_WEBP)
+                        ->format(Manipulations::FORMAT_WEBP);
+                    $image
                         ->save(public_path("images/sized/" . $sizedSrcWebP));
                 }
             } else {
@@ -64,13 +67,17 @@ class Image extends Component
                     if (!file_exists(public_path("images/sized/"))) {
                         mkdir(public_path("images/sized/"));
                     }
-                    \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
+                    $image
                         ->optimize()
-                        ->format(Manipulations::FORMAT_JPG)
+                        ->format(Manipulations::FORMAT_JPG);
+                    $image
                         ->save(public_path("images/sized/" . $sizedSrcJpg));
-                    \Spatie\Image\Image::load(resource_path("images/" . $this->src))
+                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
+                    $image
                         ->optimize()
-                        ->format(Manipulations::FORMAT_WEBP)
+                        ->format(Manipulations::FORMAT_WEBP);
+                    $image
                         ->save(public_path("images/sized/" . $sizedSrcWebP));
                 }
 
