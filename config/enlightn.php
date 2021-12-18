@@ -152,6 +152,8 @@ return [
     // flagged by the License Analyzer.
     'commercial_packages' => [
         'enlightn/enlightnpro',
+        'nette/schema',
+        'nette/utils',
     ],
 
     'allowed_permissions' => [
