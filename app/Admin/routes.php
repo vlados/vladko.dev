@@ -1,6 +1,5 @@
 <?php
 
-use App\Admin\Controllers\ProjectsController;
 use Illuminate\Routing\Router;
 
 Admin::routes();
@@ -11,9 +10,7 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
-
     $router->get('/', 'HomeController@index')->name('home');
-    $router->resource('projects', "ProjectsController");
-    $router->resource('questions', "QuestionsController");
-
+    $router->resource('projects', 'ProjectsController');
+    $router->resource('questions', 'QuestionsController');
 });

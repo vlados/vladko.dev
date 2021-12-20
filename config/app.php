@@ -1,7 +1,5 @@
 <?php
 
-use Msurguy\Honeypot\HoneypotServiceProvider;
-
 return [
 
     /*
@@ -176,7 +174,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
 
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         \App\Providers\BotCheckProvider::class,

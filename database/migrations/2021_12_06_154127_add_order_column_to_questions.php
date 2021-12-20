@@ -14,7 +14,7 @@ class AddOrderColumnToQuestions extends Migration
     public function up()
     {
         Schema::table('questions', function (Blueprint $table) {
-            $table->integer("order")->nullable();
+            $table->integer('order')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddOrderColumnToQuestions extends Migration
     public function down()
     {
         Schema::table('questions', function (Blueprint $table) {
-            $table->dropColumn("order_column");
+            $table->dropColumn('order_column');
         });
     }
 }

@@ -15,28 +15,28 @@ return [
             [
                 'path' => '/images/pwa/manifest-icon-192.maskable.png',
                 'sizes' => '192x192',
-                'purpose' => 'any'
+                'purpose' => 'any',
             ],
             [
                 'path' => '/images/pwa/manifest-icon-512.maskable.png',
                 'sizes' => '512x512',
-                'purpose' => 'any'
+                'purpose' => 'any',
             ],
             [
                 'path' => '/images/pwa/manifest-icon-192.maskable.png',
                 'sizes' => '192x192',
-                'purpose' => 'maskable'
+                'purpose' => 'maskable',
             ],
             [
                 'path' => '/images/pwa/manifest-icon-512.maskable.png',
                 'sizes' => '512x512',
-                'purpose' => 'maskable'
+                'purpose' => 'maskable',
             ],
             [
                 'path' => '/images/SVG/vladko-logo.svg',
                 'sizes' => 'any',
                 'type' => 'image/svg',
-                'purpose' => 'any'
+                'purpose' => 'any',
             ],
         ],
         'splash' => [
@@ -51,6 +51,6 @@ return [
             '1668x2388' => '/images/pwa/apple-splash-1668-2388.png',
             '2048x2732' => '/images/pwa/apple-splash-2048-2732.png',
         ],
-        'custom' => []
-    ]
+        'custom' => [],
+    ],
 ];

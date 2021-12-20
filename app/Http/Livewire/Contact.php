@@ -6,7 +6,6 @@ use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
-use Spatie\Honeypot\ProtectAgainstSpam;
 
 class Contact extends Component
 {
@@ -18,11 +17,11 @@ class Contact extends Component
     public $message = null;
 
     protected $rules = [
-        "first_name" => "required|min:3",
-        "last_name" => "required|min:3",
-        "company" => "",
-        "mail" => "required|email",
-        "message" => "required|min:10",
+        'first_name' => 'required|min:3',
+        'last_name' => 'required|min:3',
+        'company' => '',
+        'mail' => 'required|email',
+        'message' => 'required|min:10',
     ];
 
     public function render()
@@ -30,11 +29,12 @@ class Contact extends Component
         return view('livewire.contact');
     }
 
-    function updated($key) {
+    public function updated($key)
+    {
         $this->validateOnly($key);
     }
 
-    function submit()
+    public function submit()
     {
         $data = $this->validate();
         dispatch(function () use ($data) {

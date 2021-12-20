@@ -26,6 +26,6 @@ return [
         'dumper',
         'Dumper',
         'Autoload',
-        'sentry'
+        'sentry',
     ],
 ];

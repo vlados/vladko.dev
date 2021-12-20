@@ -19,73 +19,56 @@ class Image extends Component
      *
      * @return void
      */
-    public function __construct($class = "", $src = "", $width = null, $height = null)
+    public function __construct($class = '', $src = '', $width = null, $height = null)
     {
         $this->src = $src;
         $pathinfo = pathinfo($src);
-        if ($class) {
-            $this->defaultAttributes['class'] = $class;
-        }
-        if ($width) {
-            $this->defaultAttributes['width'] = $width;
-        }
-        if ($height) {
-            $this->defaultAttributes['height'] = $height;
-        }
+        $this->defaultAttributes['class'] = $class ?? null;
+        $this->defaultAttributes['width'] = $width ?? null;
+        $this->defaultAttributes['height'] = $height ?? null;
 
-        $sizedSrcJpg = $pathinfo["filename"] . "-" . $width . "x" . $height . ".jpg";
-        $sizedSrcWebP = $pathinfo["filename"] . "-" . $width . "x" . $height . ".webp";
-        try {
-
-            if ($width && $height) {
-                if (!file_exists(public_path("images/sized/" . $sizedSrcJpg))) {
-                    if (!file_exists(public_path("images/sized/"))) {
-                        mkdir(public_path("images/sized/"));
-                    }
-                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
-                    $image
-                        ->width($width)
-                        ->height($height)
-                        ->fit(Manipulations::FIT_CONTAIN, $width, $height)
-                        ->crop(Manipulations::CROP_CENTER, $width, $height)
-                        ->optimize()
-                        ->format(Manipulations::FORMAT_JPG);
-                    $image->save(public_path("images/sized/" . $sizedSrcJpg));
-                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
-                    $image
-                        ->width($width)
-                        ->height($height)
-                        ->fit(Manipulations::FIT_CONTAIN, $width, $height)
-                        ->crop(Manipulations::CROP_CENTER, $width, $height)
-                        ->optimize()
-                        ->format(Manipulations::FORMAT_WEBP);
-                    $image
-                        ->save(public_path("images/sized/" . $sizedSrcWebP));
-                }
-            } else {
-                if (!file_exists(public_path("images/sized/" . $sizedSrcJpg))) {
-                    if (!file_exists(public_path("images/sized/"))) {
-                        mkdir(public_path("images/sized/"));
-                    }
-                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
-                    $image
-                        ->optimize()
-                        ->format(Manipulations::FORMAT_JPG);
-                    $image
-                        ->save(public_path("images/sized/" . $sizedSrcJpg));
-                    $image = new \Spatie\Image\Image(resource_path("images/" . $this->src));
-                    $image
-                        ->optimize()
-                        ->format(Manipulations::FORMAT_WEBP);
-                    $image
-                        ->save(public_path("images/sized/" . $sizedSrcWebP));
-                }
-
+        $sizedSrcJpg = $pathinfo['filename'] . '-' . $width . 'x' . $height . '.jpg';
+        $sizedSrcWebP = $pathinfo['filename'] . '-' . $width . 'x' . $height . '.webp';
+        if ($width && $height) {
+            if (!file_exists(public_path('images/sized/' . $sizedSrcJpg))) {
+                $image = new \Spatie\Image\Image(resource_path('images/' . $this->src));
+                $image
+                    ->width($width)
+                    ->height($height)
+                    ->fit(Manipulations::FIT_CONTAIN, $width, $height)
+                    ->crop(Manipulations::CROP_CENTER, $width, $height)
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_JPG);
+                $image->save(public_path('images/sized/' . $sizedSrcJpg));
+                $image = new \Spatie\Image\Image(resource_path('images/' . $this->src));
+                $image
+                    ->width($width)
+                    ->height($height)
+                    ->fit(Manipulations::FIT_CONTAIN, $width, $height)
+                    ->crop(Manipulations::CROP_CENTER, $width, $height)
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_WEBP);
+                $image
+                    ->save(public_path('images/sized/' . $sizedSrcWebP));
             }
-        } catch (\Exception $imageException) {
+        } else {
+            if (!file_exists(public_path('images/sized/' . $sizedSrcJpg))) {
+                $image = new \Spatie\Image\Image(resource_path('images/' . $this->src));
+                $image
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_JPG);
+                $image
+                    ->save(public_path('images/sized/' . $sizedSrcJpg));
+                $image = new \Spatie\Image\Image(resource_path('images/' . $this->src));
+                $image
+                    ->optimize()
+                    ->format(Manipulations::FORMAT_WEBP);
+                $image
+                    ->save(public_path('images/sized/' . $sizedSrcWebP));
+            }
         }
-        $this->src = asset("images/sized/" . $sizedSrcJpg);
-        $this->src_webp = asset("images/sized/" . $sizedSrcWebP);
+        $this->src = asset('images/sized/' . $sizedSrcJpg);
+        $this->src_webp = asset('images/sized/' . $sizedSrcWebP);
     }
 
     /**

@@ -64,7 +64,7 @@ class MediaLibraryMultipleFile extends MediaLibraryBase
     {
         parent::__construct($column, $arguments);
 
-        $this->id = 'file_'.uniqid();
+        $this->id = 'file_' . uniqid();
     }
 
     protected function prepareForeach(UploadedFile $file = null)

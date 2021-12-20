@@ -15,26 +15,24 @@ class Project extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $fillable = [
-        "project_name",
-        "description",
-        "success",
-        "technologies",
-        "release_date",
-        "client_name"
+        'project_name',
+        'description',
+        'success',
+        'technologies',
+        'release_date',
+        'client_name',
     ];
     protected $casts = [
-        "technologies" => "json",
-        "release_date" => "date"
+        'technologies' => 'json',
+        'release_date' => 'date',
     ];
 
-    function setImagesAttribute()
+    public function setImagesAttribute()
     {
-
     }
 
-    function setVideosAttribute()
+    public function setVideosAttribute()
     {
-
     }
 
     public function registerMediaCollections(): void
@@ -78,5 +76,4 @@ class Project extends Model implements HasMedia
                     ->optimize();
             });
     }
-
 }

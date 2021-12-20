@@ -65,6 +65,8 @@ return [
     */
 
     'exclude' => [
+        'Http/Livewire/',
+        'Admin/Extensions/Media/',
         //  'path/to/directory-or-file'
     ],
 
@@ -105,11 +107,11 @@ return [
     */
 
     'requirements' => [
-//        'min-quality' => 0,
-//        'min-complexity' => 0,
-//        'min-architecture' => 0,
-//        'min-style' => 0,
-//        'disable-security-check' => false,
+        'min-quality' => 80,
+        'min-complexity' => 80,
+        'min-architecture' => 80,
+        'min-style' => 80,
+        'disable-security-check' => true,
     ],
 
     /*

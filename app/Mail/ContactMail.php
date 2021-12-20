@@ -3,13 +3,13 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 class ContactMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     private $form_data;
 
@@ -33,7 +33,7 @@ class ContactMail extends Mailable
     {
         return $this
             ->from('dev@vladko.dev', 'vladko.dev')
-            ->subject("New message from ". $this->form_data["first_name"]." ".$this->form_data["last_name"])
+            ->subject('New message from ' . $this->form_data['first_name'] . ' ' . $this->form_data['last_name'])
             ->markdown('emails.contact')
             ->with($this->form_data);
     }

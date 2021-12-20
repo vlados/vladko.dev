@@ -22,16 +22,6 @@ class OpcacheDebugCompile extends Command
     protected $description = 'Debug opcache:compile as curl command';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @return int
@@ -39,22 +29,23 @@ class OpcacheDebugCompile extends Command
     public function handle()
     {
         $parameters = ['force' => $this->option('force') ?? false];
-        $curl = "curl -XGET";
+        $curl = 'curl -XGET';
         $curl_options = [];
         if (config('opcache.verify')) {
-            $curl_options[] = "-k";
+            $curl_options[] = '-k';
         }
 
         if (is_array(config('opcache.headers')) && count(config('opcache.headers'))) {
             foreach (config('opcache.headers') as $key => $value) {
-                $curl_options[] = "-H " . $key . ": " . $value;
+                $curl_options[] = '-H ' . $key . ': ' . $value;
             }
         }
-        $curl .= " " . implode("", $curl_options);
+        $curl .= ' ' . implode('', $curl_options);
         $url = rtrim(config('opcache.url'), '/') . '/' . trim(config('opcache.prefix'), '/') . '/' . ltrim('compile', '/') .
-            "?" . http_build_query(array_merge(['key' => Crypt::encrypt('opcache')], $parameters));
+            '?' . http_build_query(array_merge(['key' => Crypt::encrypt('opcache')], $parameters));
         $curl .= " '" . $url . "'";
         $this->info($curl);
+
         return 1;
     }
 }

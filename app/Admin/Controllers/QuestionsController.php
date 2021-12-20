@@ -33,6 +33,7 @@ class QuestionsController extends AdminController
         $grid->column('updated_at', __('Updated at'));
 
         $grid->sortable();
+
         return $grid;
     }
 

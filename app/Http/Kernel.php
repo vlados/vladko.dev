@@ -3,7 +3,6 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Spatie\Honeypot\ProtectAgainstSpam;
 
 class Kernel extends HttpKernel
 {

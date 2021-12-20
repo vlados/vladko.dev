@@ -6,7 +6,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults' => [
-            'title' => "Vladislav Stoitsov - full-stack web developer", // set false to total remove
+            'title' => 'Vladislav Stoitsov - full-stack web developer', // set false to total remove
             'titleBefore' => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description' => 'Full-stack web developer with more than 16 years of experience leading both front-end and back-end development', // set false to total remove
             'separator' => ' - ',
@@ -39,7 +39,7 @@ return [
             'type' => 'business',
             'site_name' => 'vladko.dev',
             'images' => [
-                ('images/vladislav stoitsov.jpg')
+                ('images/vladislav stoitsov.jpg'),
             ],
         ],
     ],
@@ -56,6 +56,6 @@ return [
         /*
          * The default configurations to be used by the json-ld generator.
          */
-        'defaults' => []
+        'defaults' => [],
     ],
 ];

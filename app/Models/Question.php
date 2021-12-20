@@ -18,8 +18,8 @@ class Question extends Model implements Sortable
     ];
 
     protected $fillable = [
-        "question",
-        "order_column",
-        "answer"
+        'question',
+        'order_column',
+        'answer',
     ];
 }

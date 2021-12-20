@@ -9,12 +9,11 @@ use Encore\Admin\Form\NestedForm;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use URL;
 
 class MediaLibraryBase extends Field
 {
     use UploadField;
-    public $responsive = false;
+    private bool $responsive = false;
     private $extensions = ['image/*'];
 
     protected $view = 'admin::form.fileuploader';
@@ -55,10 +54,10 @@ class MediaLibraryBase extends Field
     {
         $filename = null;
         if ($this->form->model()->slug) {
-            $filename = Str::singular($this->column()).'-'.$this->form->model()->slug;
+            $filename = Str::singular($this->column()) . '-' . $this->form->model()->slug;
             $existing = Media::where('name', 'ilike', $filename)->where('collection_name', $this->column())->count();
             if ($existing) {
-                $filename = $filename.'-'.($existing);
+                $filename = $filename . '-' . ($existing);
             }
         }
 
@@ -67,7 +66,7 @@ class MediaLibraryBase extends Field
                 ->model()
                 ->addMedia($file)
                 ->usingName($filename)
-                ->usingFileName($filename.'.'.$file->clientExtension())
+                ->usingFileName($filename . '.' . $file->clientExtension())
                 ->preservingOriginal();
         } else {
             $media = $this->form
@@ -102,7 +101,7 @@ class MediaLibraryBase extends Field
     {
         $currentUrl = url()->current();
         if ($this->form instanceof Form) {
-            $currentUrl = $this->form->resource().'/'.$this->form->model()->getKey();
+            $currentUrl = $this->form->resource() . '/' . $this->form->model()->getKey();
         }
 
         $this->addVariables([
@@ -130,7 +129,7 @@ class MediaLibraryBase extends Field
         $request = json_decode($request);
 //        $request = array_reverse($request);
         $request = array_filter($request, function ($value) {
-            return ! is_null($value) && $value !== '';
+            return !is_null($value) && $value !== '';
         });
         if (is_array($request) && count($request)) {
             try {

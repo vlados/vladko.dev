@@ -6,8 +6,6 @@ use Clockwork\Support\Laravel\ClockworkMiddleware;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider;
-use Livewire\Livewire;
-use Spatie\Honeypot\ProtectAgainstSpam;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,10 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(Kernel $kernel, Guard $auth)
     {
-
         if ($this->app->isLocal()) {
             $kernel->prependMiddleware(ClockworkMiddleware::class);
         }
-
     }
 }

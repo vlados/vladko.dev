@@ -22,3 +22,16 @@ if (!function_exists('_cache')) {
         }
     }
 }
+
+if (!function_exists('is_bot')) {
+    /**
+     * Check if the user is bot depending on get param or the user agent header.
+     * @return bool
+     */
+    function is_bot(): bool
+    {
+        return \request()->has('bot') ||
+        \request()->headers->has('user-agent')
+        && preg_match('/bot|crawl|slurp|spider|mediapartners|Chrome-Lighthouse/i', \request()->headers->get('user-agent'));
+    }
+}

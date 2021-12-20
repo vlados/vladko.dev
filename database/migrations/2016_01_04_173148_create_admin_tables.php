@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateAdminTables extends Migration
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function getConnection()
     {

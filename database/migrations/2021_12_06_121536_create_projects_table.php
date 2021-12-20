@@ -16,12 +16,12 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text("project_name");
-            $table->longText("description")->nullable();
-            $table->longText("success")->nullable();
-            $table->json("technologies")->nullable();
-            $table->date("release_date")->nullable();
-            $table->text("client_name")->nullable();
+            $table->text('project_name');
+            $table->longText('description')->nullable();
+            $table->longText('success')->nullable();
+            $table->json('technologies')->nullable();
+            $table->date('release_date')->nullable();
+            $table->text('client_name')->nullable();
         });
     }
 

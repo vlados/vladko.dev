@@ -22,3 +22,4 @@ public/videos
 public/mix-manifest.json
 public/packages
 .history
+tools/php-cs-fixer/vendor
