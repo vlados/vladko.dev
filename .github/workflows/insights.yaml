@@ -23,6 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer install --prefer-dist --no-interaction --no-progress --no-scripts --no-dev -o
+          composer install --no-interaction --no-progress --no-scripts -o
 
       - uses: stefanzweifel/phpinsights-action@v1.1.1
