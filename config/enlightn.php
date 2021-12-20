@@ -107,7 +107,11 @@ return [
     | to auto-generate this. Patterns are supported in details.
     |
     */
-    'ignore_errors' => [],
+    'ignore_errors' => [
+        Enlightn\Enlightn\Analyzers\Security\StableDependencyAnalyzer::class => [
+        ],
+
+    ],
 
     /*
     |--------------------------------------------------------------------------

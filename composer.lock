@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a27de454000a172e025b6dbae4e425e2",
+    "content-hash": "60f9ab6da2b7cd2159f874476bdd2f41",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -4969,16 +4969,16 @@
         },
         {
             "name": "php-ffmpeg/php-ffmpeg",
-            "version": "dev-master",
+            "version": "v0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-FFMpeg/PHP-FFMpeg.git",
-                "reference": "df823d86eb10054db427258e512c85a321ed3825"
+                "reference": "edc0a7729d8818ed883e77b3d26ceb6d49ec41de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/df823d86eb10054db427258e512c85a321ed3825",
-                "reference": "df823d86eb10054db427258e512c85a321ed3825",
+                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/edc0a7729d8818ed883e77b3d26ceb6d49ec41de",
+                "reference": "edc0a7729d8818ed883e77b3d26ceb6d49ec41de",
                 "shasum": ""
             },
             "require": {
@@ -4996,7 +4996,6 @@
             "suggest": {
                 "php-ffmpeg/extras": "A compilation of common audio & video drivers for PHP-FFMpeg"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5052,9 +5051,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/issues",
-                "source": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/tree/master"
+                "source": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/tree/v0.18.0"
             },
-            "time": "2021-12-15T14:19:31+00:00"
+            "time": "2021-03-29T20:20:00+00:00"
         },
         {
             "name": "php-http/client-common",
@@ -13622,7 +13621,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "php-ffmpeg/php-ffmpeg": 20,
         "nunomaduro/phpinsights": 20
     },
     "prefer-stable": true,
