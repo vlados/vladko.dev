@@ -6,10 +6,18 @@ jobs:
   phpinsights:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - uses: MilesChou/composer-action@master
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          args: install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, json
+          coverage: none
+
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-interaction --no-progress --no-scripts --no-dev -o
 
       - uses: stefanzweifel/phpinsights-action@v1.1.1

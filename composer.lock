@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d678918bac81307150f4b7069d13e9ea",
+    "content-hash": "249b9853015853637577c94107bf3ed7",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -4969,16 +4969,16 @@
         },
         {
             "name": "php-ffmpeg/php-ffmpeg",
-            "version": "v0.18.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-FFMpeg/PHP-FFMpeg.git",
-                "reference": "edc0a7729d8818ed883e77b3d26ceb6d49ec41de"
+                "reference": "df823d86eb10054db427258e512c85a321ed3825"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/edc0a7729d8818ed883e77b3d26ceb6d49ec41de",
-                "reference": "edc0a7729d8818ed883e77b3d26ceb6d49ec41de",
+                "url": "https://api.github.com/repos/PHP-FFMpeg/PHP-FFMpeg/zipball/df823d86eb10054db427258e512c85a321ed3825",
+                "reference": "df823d86eb10054db427258e512c85a321ed3825",
                 "shasum": ""
             },
             "require": {
@@ -4996,6 +4996,7 @@
             "suggest": {
                 "php-ffmpeg/extras": "A compilation of common audio & video drivers for PHP-FFMpeg"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5051,9 +5052,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/issues",
-                "source": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/tree/v0.18.0"
+                "source": "https://github.com/PHP-FFMpeg/PHP-FFMpeg/tree/master"
             },
-            "time": "2021-03-29T20:20:00+00:00"
+            "time": "2021-12-15T14:19:31+00:00"
         },
         {
             "name": "php-http/client-common",
