@@ -34,6 +34,7 @@
         "itsgoingd/clockwork": "^5.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
+        "nunomaduro/phpinsights": "dev-master",
         "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
