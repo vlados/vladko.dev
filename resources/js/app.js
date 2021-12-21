@@ -1,14 +1,37 @@
 import Alpine from 'alpinejs';
 import Typewriter from 'typewriter-effect/dist/core';
 import AOS from 'aos';
-import {Fancybox} from "@fancyapps/ui/src/Fancybox/Fancybox";
+import {Fancybox} from "@fancyapps/ui/src/Fancybox";
+import {Panzoom} from "@fancyapps/ui/src/Panzoom";
+import {Controls} from "@fancyapps/ui/src/Panzoom/plugins/Controls/Controls";
 import Swal from 'sweetalert2/src/sweetalert2';
-import { annotate } from 'rough-notation';
+import {annotate} from 'rough-notation';
 
 window.Alpine = Alpine;
 window.Swal = Swal
 
 document.addEventListener('alpine:init', () => {
+    const panzoom = new Panzoom(document.getElementsByClassName("panzoom")[0], {
+        Controls: {
+            l10n: {
+                ZOOMIN: "Zoom in",
+                ZOOMOUT: "Zoom out",
+            },
+
+            buttons: ["zoomIn", "zoomOut"],
+            tpl: {
+                zoomIn:
+                    '<svg tabindex="-1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V20M20 12L4 12" /></svg>',
+                zoomOut:
+                    '<svg tabindex="-1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12H4" /></svg>',
+            },
+        }
+    });
+    panzoom.zoomIn(0.5);
+    const panzoomControls = new Controls(panzoom);
+    panzoomControls.createContainer()
+
+
     Fancybox.bind('a[data-fancybox]', {
         dragToClose: false,
 
@@ -19,7 +42,7 @@ document.addEventListener('alpine:init', () => {
             zoom: false,
         },
         Carousel: {
-            'friction' : 0.8
+            'friction': 0.8
         },
 
         on: {
@@ -38,7 +61,7 @@ document.addEventListener('alpine:init', () => {
             const t = new Typewriter($el, {
                 strings: ['Full-stack web developer', 'open-source evangelist', 'web designer', 'SEO expert', 'security expert', 'entrepreneur'],
                 delay: 75,
-                skipAddStyles:true,
+                skipAddStyles: true,
                 autoStart: true,
                 loop: true
             });
@@ -78,7 +101,7 @@ document.addEventListener('alpine:init', () => {
     }));
 })
 
-function getCoords(elem) { // crossbrowser version
+function getCoords(elem) { // cross browser version
     var box = elem.getBoundingClientRect();
 
     var body = document.body;

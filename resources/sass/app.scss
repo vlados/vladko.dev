@@ -8,6 +8,8 @@
 }
 
 @import "./sweetalert2";
+@import "~@fancyapps/ui/dist/panzoom.css";
+@import "~@fancyapps/ui/dist/panzoom.controls.css";
 $aos-distance: 200px; // It has to be above import
 @import "~aos/dist/aos.css";
 
