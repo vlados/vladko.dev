@@ -19,6 +19,7 @@ return [
         \Enlightn\Enlightn\Analyzers\Performance\MinificationAnalyzer::class,
         \Enlightn\Enlightn\Analyzers\Performance\HorizonSuggestionAnalyzer::class,
         \Enlightn\Enlightn\Analyzers\Security\XSSAnalyzer::class,
+        \Enlightn\Enlightn\Analyzers\Security\StableDependencyAnalyzer::class,
     ],
 
     // If you wish to skip running some analyzers in CI mode, list the classes below.
@@ -108,9 +109,7 @@ return [
     |
     */
     'ignore_errors' => [
-        Enlightn\Enlightn\Analyzers\Security\StableDependencyAnalyzer::class => [
-        ],
-
+        Enlightn\Enlightn\Analyzers\Security\StableDependencyAnalyzer::class,
     ],
 
     /*
