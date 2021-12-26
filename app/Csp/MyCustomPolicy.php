@@ -23,14 +23,12 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::DEFAULT, Keyword::SELF)
             ->addDirective(Directive::DEFAULT, $this->assets_url)
             ->addDirective(Directive::FORM_ACTION, Keyword::SELF)
-            ->addDirective(Directive::IMG, $this->assets_url)
-            ->addDirective(Directive::IMG, 'https://www.google-analytics.com')
-            ->addDirective(Directive::IMG, Keyword::SELF)
             ->addDirective(Directive::MEDIA, $this->assets_url)
             ->addDirective(Directive::OBJECT, Keyword::NONE)
             ->addDirective(Directive::CONNECT, 'https://www.google-analytics.com');
 
         $this->defineScripts();
+        $this->defineImages();
         $this->defineStyles();
 
         if (app()->environment('local')) {
@@ -56,5 +54,14 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::SCRIPT, Keyword::UNSAFE_INLINE)
             ->addDirective(Directive::SCRIPT, 'https://www.googletagmanager.com')
             ->addDirective(Directive::SCRIPT, 'https://www.google-analytics.com');
+    }
+
+    private function defineImages()
+    {
+        $this->addDirective(Directive::IMG, $this->assets_url)
+            ->addDirective(Directive::IMG, 'https://www.google-analytics.com')
+            ->addDirective(Directive::IMG, 'https://img.shields.io')
+            ->addDirective(Directive::IMG, Keyword::SELF);
+
     }
 }
