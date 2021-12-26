@@ -82,6 +82,14 @@
             </a>
 
         </div>
+        <div class="flex justify-center mt-6 space-x-6">
+            <a href="https://status.vladko.dev/" target="_blank">
+                <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vlados/status/master/api/vladko-dev/uptime.json&label=UpTime">
+            </a>
+            <a href="https://status.vladko.dev/" target="_blank">
+                <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vlados/status/master/api/vladko-dev/response-time.json&label=Response%20time&color=critical">
+            </a>
+        </div>
         <p class="mt-8 text-base text-center @unlessbot text-gray-400 @endbot">
             &copy; 2004-{{ date('Y') }} {{ config('app.name') }}. All rights reserved.
         </p>
