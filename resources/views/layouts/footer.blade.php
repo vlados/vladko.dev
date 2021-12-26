@@ -84,10 +84,12 @@
         </div>
         <div class="flex justify-center mt-6 space-x-6">
             <a href="https://status.vladko.dev/" target="_blank">
-                <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vlados/status/master/api/vladko-dev/uptime.json&label=UpTime">
+                <span class="sr-only">UpTime status</span>
+                <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vlados/status/master/api/vladko-dev/uptime.json&label=UpTime&cacheSeconds=2592000000" alt="uptime">
             </a>
             <a href="https://status.vladko.dev/" target="_blank">
-                <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vlados/status/master/api/vladko-dev/response-time.json&label=Response%20time&color=critical">
+                <span class="sr-only">Response time status</span>
+                <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/vlados/status/master/api/vladko-dev/response-time.json&label=Response%20time&color=critical&cacheSeconds=2592000000" alt="response time">
             </a>
         </div>
         <p class="mt-8 text-base text-center @unlessbot text-gray-400 @endbot">
