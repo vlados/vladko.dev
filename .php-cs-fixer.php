@@ -7,21 +7,25 @@ $rules = [
     'array_syntax' => ['syntax' => 'short'],
     'binary_operator_spaces' => [
         'default' => 'single_space',
-        'operators' => ['=>' => null]
+        'operators' => ['=>' => null],
     ],
     'blank_line_after_namespace' => true,
     'blank_line_after_opening_tag' => true,
     'blank_line_before_statement' => [
-        'statements' => ['return']
+        'statements' => ['return'],
     ],
     'braces' => true,
     'cast_spaces' => true,
     'class_attributes_separation' => [
-        'elements' => ['method' => 'one']
+        'elements' => [
+            'method' => 'one',
+            'const' => 'only_if_meta',
+            'trait_import' => 'only_if_meta',
+        ],
     ],
     'class_definition' => true,
     'concat_space' => [
-        'spacing' => 'one'
+        'spacing' => 'one',
     ],
     'declare_equal_normalize' => true,
     'elseif' => true,
@@ -50,8 +54,7 @@ $rules = [
             'extra',
             'throw',
             'use',
-            'use_trait',
-        ]
+        ],
     ],
     'no_blank_lines_after_class_opening' => true,
     'no_blank_lines_after_phpdoc' => true,
@@ -61,11 +64,11 @@ $rules = [
     'no_leading_import_slash' => true,
     'no_leading_namespace_whitespace' => true,
     'no_mixed_echo_print' => [
-        'use' => 'echo'
+        'use' => 'echo',
     ],
     'no_multiline_whitespace_around_double_arrow' => true,
     'multiline_whitespace_before_semicolons' => [
-        'strategy' => 'no_multi_line'
+        'strategy' => 'no_multi_line',
     ],
     'no_short_bool_cast' => true,
     'no_singleline_whitespace_before_semicolons' => true,
@@ -109,7 +112,7 @@ $rules = [
     'single_import_per_statement' => true,
     'single_line_after_imports' => true,
     'single_line_comment_style' => [
-        'comment_types' => ['hash']
+        'comment_types' => ['hash'],
     ],
     'single_quote' => true,
     'space_after_semicolon' => true,
@@ -121,12 +124,11 @@ $rules = [
     'trim_array_spaces' => true,
     'unary_operator_spaces' => true,
     'visibility_required' => [
-        'elements' => ['method', 'property']
+        'elements' => ['method', 'property'],
     ],
     'whitespace_after_comma_in_array' => true,
     'no_unused_imports' => true,
 ];
-
 
 $finder = Finder::create()
     ->in([
@@ -143,6 +145,7 @@ $finder = Finder::create()
     ->ignoreVCS(true);
 
 $config = new Config();
+
 return $config->setFinder($finder)
     ->setRules($rules)
     ->setRiskyAllowed(true)
