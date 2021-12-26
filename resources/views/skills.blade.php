@@ -148,7 +148,7 @@
         Continuous integration
     </p>
     @else
-        <div class="panzoom  rounded-md bg-white border-gray-200 border">
+        <div class="panzoom aspect-video rounded-md bg-white border-gray-200 border">
             <img class="panzoom__content" src="{{ asset("images/skills-map-01.svg") }}"/>
         </div>
         @endbot
