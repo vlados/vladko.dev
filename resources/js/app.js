@@ -11,25 +11,27 @@ window.Alpine = Alpine;
 window.Swal = Swal
 
 document.addEventListener('alpine:init', () => {
-    const panzoom = new Panzoom(document.getElementsByClassName("panzoom")[0], {
-        Controls: {
-            l10n: {
-                ZOOMIN: "Zoom in",
-                ZOOMOUT: "Zoom out",
-            },
+    if (document.getElementsByClassName("panzoom")[0] instanceof HTMLElement) {
+        const panzoom = new Panzoom(document.getElementsByClassName("panzoom")[0], {
+            Controls: {
+                l10n: {
+                    ZOOMIN: "Zoom in",
+                    ZOOMOUT: "Zoom out",
+                },
 
-            buttons: ["zoomIn", "zoomOut"],
-            tpl: {
-                zoomIn:
-                    '<svg tabindex="-1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V20M20 12L4 12" /></svg>',
-                zoomOut:
-                    '<svg tabindex="-1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12H4" /></svg>',
-            },
-        }
-    });
-    panzoom.zoomIn(0.5);
-    const panzoomControls = new Controls(panzoom);
-    panzoomControls.createContainer()
+                buttons: ["zoomIn", "zoomOut"],
+                tpl: {
+                    zoomIn:
+                        '<svg tabindex="-1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V20M20 12L4 12" /></svg>',
+                    zoomOut:
+                        '<svg tabindex="-1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12H4" /></svg>',
+                },
+            }
+        });
+        panzoom.zoomIn(0.5);
+        const panzoomControls = new Controls(panzoom);
+        panzoomControls.createContainer()
+    }
 
 
     Fancybox.bind('a[data-fancybox]', {
@@ -99,6 +101,17 @@ document.addEventListener('alpine:init', () => {
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     }));
+    Alpine.data('projectDetails', () => ({
+        visible: false,
+        scrollShadow: true,
+        hide: function () {
+            this.visible = false;
+            document.body.style.overflow = '';
+            Livewire.emit('hide-modal');
+        },
+        init: function () {
+        },
+    }));
 })
 
 function getCoords(elem) { // cross browser version
@@ -125,5 +138,15 @@ window.scrollSpy = function () {
 window.highlight = function (element) {
     const type = element.dataset['type'] || "underline"
     annotate(element, {type});
+}
+
+window.loadProject = function (id) {
+    const event = window.dispatchEvent(new CustomEvent("project-modal", {
+        detail: {
+            visibility: true,
+        }
+    }))
+    Livewire.emit('project-modal',id);
+    document.body.style.overflow = 'hidden';
 }
 Alpine.start();

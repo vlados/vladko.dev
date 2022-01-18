@@ -21,7 +21,7 @@ return [
         'showConfirmButton' => false,
         'showCloseButton' => true,
         'position' => 'top',
-        'timer' => 10000,
+        'timer' => 3500,
         'timerProgressBar' => true,
         'toast' => true,
         'text' => '',

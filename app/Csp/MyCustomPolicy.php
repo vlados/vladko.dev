@@ -32,7 +32,7 @@ class MyCustomPolicy extends Basic
         $this->defineStyles();
 
         if (app()->environment('local')) {
-            $this->addDirective(Directive::IMG, 'https://lipsum.app');
+            $this->addDirective(Directive::IMG, '*');
             $this->addDirective(Directive::IMG, 'https://images.unsplash.com/');
             $this->addDirective(Directive::CONNECT, 'ws://localhost:8080');
             $this->addDirective(Directive::CONNECT, 'http://localhost:8080');
@@ -43,6 +43,12 @@ class MyCustomPolicy extends Basic
     {
         $this->addDirective(Directive::STYLE, $this->assets_url)
             ->addDirective(Directive::STYLE, Keyword::UNSAFE_INLINE);
+
+        if (request()->is('admin/*')) {
+            $this
+                ->addDirective(Directive::STYLE, 'https://cdn.jsdelivr.net/')
+                ->addDirective(Directive::STYLE, 'https://cdn.ckeditor.com/');
+        }
     }
 
     private function defineScripts()
@@ -54,6 +60,13 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::SCRIPT, Keyword::UNSAFE_INLINE)
             ->addDirective(Directive::SCRIPT, 'https://www.googletagmanager.com')
             ->addDirective(Directive::SCRIPT, 'https://www.google-analytics.com');
+
+        if (request()->is('admin/*')) {
+            $this
+                ->addDirective(Directive::SCRIPT, 'https://cdn.jsdelivr.net/')
+                ->addDirective(Directive::SCRIPT, 'https://npmcdn.com/')
+                ->addDirective(Directive::SCRIPT, 'https://cdn.ckeditor.com/');
+        }
     }
 
     private function defineImages()
@@ -62,5 +75,9 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::IMG, 'https://www.google-analytics.com')
             ->addDirective(Directive::IMG, 'https://img.shields.io')
             ->addDirective(Directive::IMG, Keyword::SELF);
+
+        if (request()->is('admin/*')) {
+            $this->addDirective(Directive::IMG, 'data:');
+        }
     }
 }

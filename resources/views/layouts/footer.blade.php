@@ -6,7 +6,7 @@
                 me</a>
             <a href="#skills" class="text-gray-900 no-underline hover:text-indigo-700">Skills</a>
             <a href="#experience" class="text-gray-900 no-underline hover:text-indigo-700">Experience</a>
-            @if (count($projects))
+            @if (isset($projects) && count($projects))
                 <a href="#projects" class="text-gray-900 no-underline hover:text-indigo-700">Latest
                     projects</a>
             @endif

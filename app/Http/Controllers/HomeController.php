@@ -80,7 +80,7 @@ class HomeController extends Controller
             'logo' => asset('images/SVG/vladko-logo-01.png'),
         ]);
         if (is_bot()) {
-            SEOMeta::setTitleDefault('👨‍ Vladislav Stoitsov - full-stack web developer');
+            SEOMeta::setTitleDefault('&#128104;&#8205;&#128187;  Vladislav Stoitsov - full-stack web developer');
         }
         SEOMeta::setDescription('Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer');
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');

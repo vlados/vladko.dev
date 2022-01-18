@@ -2,17 +2,23 @@
 
 namespace App\Models;
 
+use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Cog\Contracts\Love\Reactable\Models\Reactable as ReactableInterface;
+use Shetabit\Visitor\Traits\Visitable;
 use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Project extends Model implements HasMedia
+class Project extends Model implements HasMedia, ReactableInterface
 {
     use HasFactory;
     use InteractsWithMedia;
+    use Visitable;
+    use Reactable;
+
 
     protected $fillable = [
         'project_name',
