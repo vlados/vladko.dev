@@ -75,6 +75,7 @@ class MyCustomPolicy extends Basic
             ->addDirective(Directive::IMG, 'https://www.google-analytics.com')
             ->addDirective(Directive::IMG, 'https://img.shields.io')
             ->addDirective(Directive::IMG, Keyword::SELF);
+        $this->addDirective(Directive::IMG, 'data:');
 
         if (request()->is('admin/*')) {
             $this->addDirective(Directive::IMG, 'data:');
