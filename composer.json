@@ -28,10 +28,11 @@
         "spatie/image": "^1.0",
         "spatie/laravel-csp": "^2.6",
         "spatie/laravel-medialibrary": "9.8.2",
+        "symfony/mailer": "^6.0",
         "wireui/wireui": "^0.15.0"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
+        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^3.4",
         "itsgoingd/clockwork": "^5.1",
