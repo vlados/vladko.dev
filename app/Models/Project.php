@@ -53,12 +53,12 @@ class Project extends Model implements HasMedia, ReactableInterface
                     ->height(270)
                     ->optimize()
                     ->fit(Manipulations::FIT_CONTAIN, 360, 270)
-                    ->crop(Manipulations::CROP_CENTER, 360, 270);
+                    ->crop(Manipulations::CROP_TOP, 360, 270);
 
                 $this->addMediaConversion('large')
                     ->withResponsiveImages()
                     ->format('jpg')
-                    ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
+                    ->fit(Manipulations::FIT_MAX, 1800, 50000)
                     ->optimize();
             });
         // videos
@@ -72,13 +72,13 @@ class Project extends Model implements HasMedia, ReactableInterface
                     ->height(270)
                     ->optimize()
                     ->fit(Manipulations::FIT_CONTAIN, 360, 270)
-                    ->crop(Manipulations::CROP_CENTER, 360, 270);
+                    ->crop(Manipulations::CROP_TOP, 360, 270);
 
                 $this->addMediaConversion('large')
                     ->extractVideoFrameAtSecond(10)
-                    ->withResponsiveImages()
+//                    ->withResponsiveImages()
                     ->format('jpg')
-                    ->fit(Manipulations::FIT_CONTAIN, 1800, 1350)
+                    ->fit(Manipulations::FIT_MAX, 1800, 40000)
                     ->optimize();
             });
     }
