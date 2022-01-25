@@ -2,6 +2,7 @@ const mix = require("laravel-mix");
 
 require("laravel-mix-tailwind");
 require("laravel-mix-blade-reload");
+require('laravel-mix-eslint')
 
 /*
  |--------------------------------------------------------------------------
@@ -15,14 +16,20 @@ require("laravel-mix-blade-reload");
  */
 mix.copy("./vendor/wireui/wireui/dist/wireui.js", "./public/js/wireui.js");
 mix.webpackConfig({
-    node:false
+    node: false
 });
 
+mix.postCss("resources/sass/critical.css", "public/css", [
+        require("tailwindcss"),
+    ]);
 
 mix.js("resources/js/app.js", "public/js/app.js")
-.js("resources/js/minimal.js", "public/js/")
+    .js("resources/js/minimal.js", "public/js/")
+    .eslint({
+        fix: true,
+        extensions: ['js']
+    })
     .sass("resources/sass/app.scss", "public/css/app.css")
-    .sass("resources/sass/critical.scss", "public/css/critical.css")
     .sass("resources/sass/fonts.scss", "public/css/fonts.css")
     .tailwind("./tailwind.config.js")
     .copy("resources/images/", "public/images/")
