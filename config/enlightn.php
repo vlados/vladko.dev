@@ -20,6 +20,7 @@ return [
         \Enlightn\Enlightn\Analyzers\Performance\HorizonSuggestionAnalyzer::class,
         \Enlightn\Enlightn\Analyzers\Security\XSSAnalyzer::class,
         \Enlightn\Enlightn\Analyzers\Security\StableDependencyAnalyzer::class,
+        \Enlightn\Enlightn\Analyzers\Security\FillableForeignKeyAnalyzer::class,
     ],
 
     // If you wish to skip running some analyzers in CI mode, list the classes below.
