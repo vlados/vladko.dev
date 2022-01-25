@@ -37,7 +37,7 @@
 
                     @if ($project->description)
                         <div
-                            class="mt-1 my-3 max-w-md mx-auto prose prose-base leading-6 text-gray-500 md:max-w-5xl text-center">
+                            class="mt-1 my-3 max-w-md mx-auto prose prose-base prose-ul:list-none leading-6 text-gray-500 md:max-w-5xl text-center">
                             {!! $project->description !!}
                         </div>
                     @endif
@@ -45,21 +45,29 @@
 
                 </div>
                 @if ($project->hasMedia('images'))
-                    <div class="relative z-20 px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 bg-white mt-10">
+                    <div
+                        class="relative z-20 px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 bg-white mt-10">
                         @foreach($project->getMedia('images') as $img)
-                            <a href="{{ $img->getFullUrl('large') }}" data-fancybox="project_{{ $project->id }}" class="border border-gray-200 hover:border-indigo-500 hover:ring-4 hover:ring-indigo-100 rounded transition-all">
-                                <img src="{{ $img->getFullUrl('thumb') }}" class="w-auto object-cover rounded"/>
+                            <a href="{{ $img->getFullUrl('large') }}" data-fancybox="project_{{ $project->id }}"
+                               data-caption="{!! $img->getCustomProperty("caption") !!}"
+                               class="border border-gray-200 hover:border-indigo-500 hover:ring-4 hover:ring-indigo-100 rounded transition-all hover:shadow-lg overflow-hidden">
+                                <figure class="relative">
+                                    <img src="{{ $img->getFullUrl('thumb') }}" class="w-auto object-cover rounded"/>
+                                    <figcaption class="absolute text-xs text-gray-600 bottom-0 bg-white/80 backdrop-blur backdrop-filter backdrop-grayscale w-full py-1 px-3 truncate">{{ $img->getCustomProperty("caption") }}</figcaption>
+                                </figure>
                             </a>
+
                         @endforeach
                     </div>
                 @endif
             </div>
-{{--            <div class="relative w-full h-0" x-show="scrollShadow" x-transition>--}}
-{{--                <div class="bg-gradient-to-b from-white/0 to-gray-300/20 h-10 absolute left-0 right-0 -top-10"></div>--}}
-{{--            </div>--}}
-            <div class="bg-white py-3">
+            {{--            <div class="relative w-full h-0" x-show="scrollShadow" x-transition>--}}
+            {{--                <div class="bg-gradient-to-b from-white/0 to-gray-300/20 h-10 absolute left-0 right-0 -top-10"></div>--}}
+            {{--            </div>--}}
+            <div class="bg-gray-50 border-t-2 border-gray-200 py-3 grid grid-cols-1 md:grid-cols-3">
+                <div></div>
                 <livewire:reactions :project="$project"/>
-                <div class="text-center text-xs flex justify-center items-center text-gray-500">
+                <div class="font-bold text-base flex justify-center items-center text-gray-500 pr-0 md:pr-10 md:justify-end">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
                          stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"

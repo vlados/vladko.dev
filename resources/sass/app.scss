@@ -135,21 +135,8 @@ $aos-distance: 200px; // It has to be above import
         }
     }
 }
-//
-//.fancybox__backdrop {
-//    @apply bg-white/80;
-//}
-//.fancybox__content {
-//    @apply rounded-xl drop-shadow-2xl shadow-xl shadow-gray-500/30 overflow-hidden backdrop-grayscale p-4 bg-white;
-//}
-//.fancybox__slide {
-//    padding: 10px 64px;
-//    @apply relative;
-//}
-//.fancybox__track {
-//    // @apply transition-all duration-75;
-//}
-//.fancybox__caption {
-//    @apply absolute bottom-0;
-//}
-//
+.prose :where(ul > li):not(:where([class~="not-prose"] *))::before {
+    content:' ';
+    @apply inline-block h-5 w-5 mr-2 relative top-1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 stroke-current   ' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+}
