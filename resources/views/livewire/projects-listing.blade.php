@@ -10,6 +10,7 @@
 		<div class="md:hidden">
 			<x-select
 				label="Filter by technology"
+				placeholder="All technologies"
 				:options="$tags"
 				wire:model="selected_tag" />
 		</div>

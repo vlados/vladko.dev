@@ -19,7 +19,7 @@ class HomeController extends Controller
             return Question::orderBy('order')->get();
         }, 60 * 24);
         $projects = _cache('projects', function () {
-            return Project::orderBy('order_column','asc')->get();
+            return Project::orderBy('order_column', 'asc')->get();
         }, app()->environment('local') ? 0 : (60 * 24));
         $tags = $projects->map(function (Project $project) {
             return explode(',', $project->technologies);
@@ -94,10 +94,9 @@ class HomeController extends Controller
                 'projects' => $projects,
                 'project_tags' => $tags,
             ]);
+            $response->setPublic();
             $response->header('Last-modified', $lastModifiedDate);
-            if ($response->isNotModified(\request())) {
-                $response->setStatusCode(304);
-            }
+            $response->isNotModified(\request());
 
             return $response;
         }, 'public;etag;max_age=10800;last_modified=' . $lastModifiedDate);
