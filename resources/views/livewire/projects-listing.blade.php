@@ -7,13 +7,13 @@
 			</h2>
 		</div>
 		<livewire:project-details/>
-		<div class="md:hidden">
-			<x-select
-				label="Filter by technology"
-				placeholder="All technologies"
-				:options="$tags"
-				wire:model="selected_tag" />
-		</div>
+{{--		<div class="md:hidden">--}}
+{{--			<x-select--}}
+{{--				label="Filter by technology"--}}
+{{--				placeholder="All technologies"--}}
+{{--				:options="$tags"--}}
+{{--				wire:model="selected_tag" />--}}
+{{--		</div>--}}
 
 		<div class="group p-1 rounded-lg md:flex hidden bg-gray-100 hover:bg-gray-200 max-w-fit mx-auto mt-5 relative">
 			@foreach($tags as $tag)
