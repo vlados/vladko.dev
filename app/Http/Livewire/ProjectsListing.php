@@ -19,7 +19,7 @@ class ProjectsListing extends Component
     public function updatedSelectedTag($tag)
     {
         $this->filtered_projects = $this->projects->filter(function ($project) use ($tag) {
-            if ($tag == 'All') {
+            if ($tag == 'All' || $tag == '') {
                 return true;
             }
             $tags = explode(',', $project->technologies);
