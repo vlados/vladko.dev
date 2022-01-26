@@ -210,12 +210,18 @@
 				<a class="group flex flex-col" href="#" @click.prevent="loadProject({{ $project->id}})"
 				   wire:key="project_{{ $project->id }}">
                         <span
-							class="border border-gray-200 group-hover:border-indigo-500 group-hover:ring-4 group-hover:ring-indigo-100 rounded transition-all group-hover:shadow-lg inline-flex">
+							class="border border-gray-200 group-hover:border-indigo-500 group-hover:ring-4 group-hover:ring-indigo-100 rounded transition-all group-hover:shadow-lg inline-flex relative">
                             @if ($project->hasMedia('images'))
 								<img src="{{ $project->getFirstMediaUrl("images","thumb") }}"
 									 alt="Natural leather journal with brass disc binding and three paper refill sets."
 									 class="object-cover rounded w-full h-auto">
 							@endif
+							@if ($loop->index == 0)
+									<span class="absolute right-1.5 top-1.5 z-50 items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-red-200 uppercase text-red-800">
+  latest
+</span>
+
+								@endif
                         </span>
 					<span class="mt-6 block flex-col flex">
                     @if ($project->technologies)
