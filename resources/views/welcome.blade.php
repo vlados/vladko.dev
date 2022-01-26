@@ -149,8 +149,8 @@
 	@include("skills")
 	@include("experience")
 	@include("faq")
-	@include("projects")
 	@unlessbot
+	@include("projects")
 	<livewire:contact/>
 	@endbot
 @endsection
