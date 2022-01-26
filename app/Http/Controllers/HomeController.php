@@ -8,8 +8,8 @@ use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Middleware\SetCacheHeaders;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Response;
 
 class HomeController extends Controller
 {
@@ -89,13 +89,18 @@ class HomeController extends Controller
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');
 
         return (new SetCacheHeaders())->handle(new Request(), function () use ($tags, $lastModifiedDate, $projects, $faq) {
-            $response = view('welcome', [
-                'faq' => $faq,
-                'projects' => $projects,
-                'project_tags' => $tags,
-            ]);
-
-            return $response;
+            $response = new Response();
+            $response->setPublic();
+            $response->setLastModified($lastModifiedDate);
+            if ($response->isNotModified(\request())) {
+                return $response;
+            } else {
+                return \Illuminate\Support\Facades\Response::view('welcome', [
+                    'faq' => $faq,
+                    'projects' => $projects,
+                    'project_tags' => $tags,
+                ]);
+            }
         }, 'public;etag;max_age=10800;last_modified=' . $lastModifiedDate);
     }
 }
