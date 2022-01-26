@@ -20,7 +20,10 @@ class HomeController extends Controller
         }, 60 * 24);
         $projects = _cache('projects', function () {
             return Project::all();
-        }, 60 * 24);
+        }, app()->environment('local') ? 0 : (60 * 24));
+        $tags = $projects->map(function (Project $project) {
+            return explode(',', $project->technologies);
+        })->flatten()->unique()->prepend('All')->toArray();
 
         // create $dates array and fill it with dates, then we can get the newest and set it as Last-modified in the headers
         $lastModifiedDate = _cache('lastModifiedDate', function () {
@@ -80,15 +83,16 @@ class HomeController extends Controller
             'logo' => asset('images/SVG/vladko-logo-01.png'),
         ]);
         if (is_bot()) {
-            SEOMeta::setTitleDefault('👨‍ Vladislav Stoitsov - full-stack web developer');
+            SEOMeta::setTitleDefault('&#128104;&#8205;&#128187;  Vladislav Stoitsov - full-stack web developer');
         }
         SEOMeta::setDescription('Full-stack web developer with more than 16 years of experience leading both front-end and back-end development. Laravel Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App developer');
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');
 
-        return (new SetCacheHeaders())->handle(new Request(), function () use ($lastModifiedDate, $projects, $faq) {
+        return (new SetCacheHeaders())->handle(new Request(), function () use ($tags, $lastModifiedDate, $projects, $faq) {
             $response = Response::view('welcome', [
                 'faq' => $faq,
                 'projects' => $projects,
+                'project_tags' => $tags,
             ]);
             $response->header('Last-modified', $lastModifiedDate);
             if ($response->isNotModified(\request())) {

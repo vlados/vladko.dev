@@ -11,6 +11,7 @@
         "artesaos/seotools": "^0.20.2",
         "coconutcraig/laravel-postmark": "^2.11",
         "cweagans/composer-patches": "^1.7",
+        "cybercog/laravel-love": "^8.8",
         "encore/laravel-admin": "^1.8",
         "enlightn/enlightn": "^1.22",
         "fruitcake/laravel-cors": "^2.0",
@@ -22,14 +23,16 @@
         "livewire/livewire": "^2.8",
         "php-ffmpeg/php-ffmpeg": "^v0.18.0",
         "sentry/sentry-laravel": "^2.10",
+        "shetabit/visitor": "^3.1",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/image": "^1.0",
         "spatie/laravel-csp": "^2.6",
         "spatie/laravel-medialibrary": "9.8.2",
+        "symfony/mailer": "^6.0",
         "wireui/wireui": "^0.15.0"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
+        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^3.4",
         "itsgoingd/clockwork": "^5.1",
@@ -90,7 +93,12 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

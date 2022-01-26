@@ -62,6 +62,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },
+            transitionProperty: {
+                'width': 'max-width'
+            },
+
         },
     },
     variants: {

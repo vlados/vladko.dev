@@ -77,7 +77,7 @@ class ProjectsController extends AdminController
         $form->tags('technologies', __('Technologies'));
         $form->date('release_date', __('Release date'));
         $form->text('client_name', __('Client name'));
-        $form->multipleMediaLibrary('images')->allowExtensions(['images/*']);
+        $form->multipleMediaLibrary('images')->allowExtensions(['image/*']);
         $form->multipleMediaLibrary('videos')->allowExtensions(['video/*']);
 
         return $form;
