@@ -89,17 +89,17 @@ class HomeController extends Controller
         SEOMeta::setKeywords('Laravel, Livewire, Angular, PHP, JavaScript, SASS, TailwindCSS, Progressive Web App,fullstack, aplinejs, frontend');
 
         return (new SetCacheHeaders())->handle(new Request(), function () use ($tags, $lastModifiedDate, $projects, $faq) {
-            $response = Response::make(view('welcome', [
+            $response = Response::view('welcome', [
                 'faq' => $faq,
                 'projects' => $projects,
                 'project_tags' => $tags,
-            ])->render());
+            ]);
             $response->setPublic();
             $response->setLastModified($lastModifiedDate);
 
             $response->header('Last-modified', $lastModifiedDate);
             if ($response->isNotModified(\request())) {
-				$response->setContent("");
+                $response->setContent(null);
                 $response->setStatusCode(304);
             }
 

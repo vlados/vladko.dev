@@ -7,13 +7,15 @@
 			</h2>
 		</div>
 		<livewire:project-details/>
-{{--		<div class="md:hidden">--}}
-{{--			<x-select--}}
-{{--				label="Filter by technology"--}}
-{{--				placeholder="All technologies"--}}
-{{--				:options="$tags"--}}
-{{--				wire:model="selected_tag" />--}}
-{{--		</div>--}}
+		<div class="md:hidden">
+			<x-dynamic-component
+				:component="WireUiComponent::resolve('select')"
+				label="Filter by technology"
+				placeholder="All technologies"
+				:options="$tags"
+				wire:model="selected_tag"
+			/>
+		</div>
 
 		<div class="group p-1 rounded-lg md:flex hidden bg-gray-100 hover:bg-gray-200 max-w-fit mx-auto mt-5 relative">
 			@foreach($tags as $tag)
@@ -226,9 +228,7 @@
 							@endif
 							@if ($loop->index == 0)
 								<span
-									class="absolute right-1.5 top-1.5 z-50 items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-red-200 uppercase text-red-800">
-  latest
-</span>
+									class="absolute right-1.5 top-1.5 items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-red-200 uppercase text-red-800">latest</span>
 
 							@endif
                         </span>
