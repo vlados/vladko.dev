@@ -6,6 +6,7 @@
 				Projects on focus
 			</h2>
 		</div>
+		@unlessbot
 		<livewire:project-details/>
 		<div class="md:hidden">
 			<x-dynamic-component
@@ -215,6 +216,7 @@
 			{{--				<span class="absolute top-0 text-[10px] leading-3 font-semibold -rotate-[7deg] translate-x-5 -translate-y-2/3 text-indigo-600">this is livewire</span>--}}
 			{{--			</div>--}}
 		</div>
+		@endbot
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-6 my-10">
 			@foreach($filtered_projects as $project)
 				<a class="group flex flex-col" href="#" @click.prevent="loadProject({{ $project->id}})"
@@ -223,7 +225,8 @@
 							class="border border-gray-200 group-hover:border-indigo-500 group-hover:ring-4 group-hover:ring-indigo-100 rounded transition-all group-hover:shadow-lg inline-flex relative">
                             @if ($project->hasMedia('images'))
 								<img src="{{ $project->getFirstMediaUrl("images","thumb") }}"
-									 alt="Natural leather journal with brass disc binding and three paper refill sets."
+									 loading="lazy"
+									 alt="{{ $project->project_name }}"
 									 class="object-cover rounded w-full h-auto">
 							@endif
 							@if ($project->latest)

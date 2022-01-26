@@ -11,6 +11,12 @@ document.addEventListener('alpine:init', () => {
 			this.show = false;
 		},
 	}));
+	Alpine.data('projectDetails', () => ({
+		visible: false, scrollShadow: true, hide() {
+		}, init() {
+		},
+	}));
+
 	Alpine.data('scrollToTop', () => ({
 		visibleScrollToTop: false,
 	}));

@@ -63,7 +63,7 @@
 <div
     class="fixed inset-0 z-50 flex flex-col items-center justify-center ease-linear bg-white bg-opacity-50 backdrop-blur-2xl white"
     x-transition:leave="transition ease-in delay-500" x-transition:leave-start="opacity-100 transform scale-100"
-    x-transition:leave-end="opacity-0 transform scale-200" x-data="loading" x-show="show">
+    x-transition:leave-end="opacity-0 transform scale-200" x-data="loading">
     <x-logo height="60" width="60" class="ml-2 fill-current animate-spin duration-2000" middle="text-gray-400"/>
     <div class="mt-5 text-base font-semibold text-gray-600">Loading ...</div>
 </div>
