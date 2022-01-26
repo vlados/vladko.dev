@@ -96,11 +96,11 @@ class HomeController extends Controller
             if ($response->isNotModified(\request())) {
                 return $response;
             } else {
-                return \Illuminate\Support\Facades\Response::view('welcome', [
+                return \Illuminate\Support\Facades\Response::make(view('welcome', [
                     'faq' => $faq,
                     'projects' => $projects,
                     'project_tags' => $tags,
-                ]);
+                ])->render());
             }
         }, 'public;etag;max_age=10800;last_modified=' . $lastModifiedDate);
     }
