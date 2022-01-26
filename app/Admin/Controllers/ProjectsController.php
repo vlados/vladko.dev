@@ -27,14 +27,10 @@ class ProjectsController extends AdminController
         $grid = new Grid(new Project());
 
         $grid->column('id', __('Id'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
         $grid->column('project_name', __('Project name'));
-        $grid->column('description', __('Description'));
-        $grid->column('success', __('Success'));
         $grid->column('technologies', __('Technologies'));
-        $grid->column('release_date', __('Release date'));
-        $grid->column('client_name', __('Client name'));
+		$grid->model()->orderBy('order_column');
+		$grid->sortable();
 
         return $grid;
     }
