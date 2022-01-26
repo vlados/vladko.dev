@@ -6,7 +6,6 @@ import {Panzoom} from '@fancyapps/ui/src/Panzoom';
 import {Controls} from '@fancyapps/ui/src/Panzoom/plugins/Controls/Controls';
 import Swal from 'sweetalert2/src/sweetalert2';
 import {annotate} from 'rough-notation';
-import {RoughAnnotationType} from "rough-notation/lib/model";
 
 window.Alpine = Alpine;
 window.Swal = Swal;

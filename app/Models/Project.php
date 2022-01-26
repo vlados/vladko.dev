@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use Cog\Contracts\Love\Reactable\Models\Reactable as ReactableInterface;
 use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Cog\Contracts\Love\Reactable\Models\Reactable as ReactableInterface;
 use Shetabit\Visitor\Traits\Visitable;
+use Spatie\EloquentSortable\SortableTrait;
 use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -18,7 +19,12 @@ class Project extends Model implements HasMedia, ReactableInterface
     use InteractsWithMedia;
     use Visitable;
     use Reactable;
+    use SortableTrait;
 
+    public $sortable = [
+        'order_column_name' => 'order_column',
+        'sort_when_creating' => true,
+    ];
 
     protected $fillable = [
         'project_name',
@@ -27,6 +33,7 @@ class Project extends Model implements HasMedia, ReactableInterface
         'technologies',
         'release_date',
         'client_name',
+        'order_column',
     ];
     protected $casts = [
         'technologies' => 'json',
