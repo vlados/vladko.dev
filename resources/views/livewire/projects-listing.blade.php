@@ -226,7 +226,7 @@
 									 alt="Natural leather journal with brass disc binding and three paper refill sets."
 									 class="object-cover rounded w-full h-auto">
 							@endif
-							@if ($loop->index == 0)
+							@if ($project->latest)
 								<span
 									class="absolute right-1.5 top-1.5 items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-red-200 uppercase text-red-800">latest</span>
 

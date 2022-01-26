@@ -19,6 +19,7 @@ class HomeController extends Controller
             return Question::orderBy('order')->get();
         }, 60 * 24);
         $projects = _cache('projects', function () {
+
             return Project::orderBy('order_column', 'asc')->get();
         }, app()->environment('local') ? 0 : (60 * 24));
         $tags = $projects->map(function (Project $project) {

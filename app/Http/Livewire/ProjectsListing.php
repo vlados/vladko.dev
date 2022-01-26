@@ -10,14 +10,25 @@ class ProjectsListing extends Component
     public $tags;
     public $selected_tag = 'All';
     public $filtered_projects;
+    public $latest_project_id;
 
     public function mount($projects)
     {
-        $this->filtered_projects = $projects;
+        $this->latest_project_id = $projects->first()->id;
+        $this->filtered_projects = $this->projects->map(function ($project) {
+            $project->latest = $project->id == $this->latest_project_id;
+
+            return $project;
+        });
     }
 
     public function updatedSelectedTag($tag)
     {
+        $this->projects->map(function ($project) {
+            $project->latest = $project->id == $this->latest_project_id;
+
+            return $project;
+        });
         $this->filtered_projects = $this->projects->filter(function ($project) use ($tag) {
             if ($tag == 'All' || $tag == '') {
                 return true;
