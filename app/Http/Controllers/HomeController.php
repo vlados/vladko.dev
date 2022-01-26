@@ -91,6 +91,7 @@ class HomeController extends Controller
         return (new SetCacheHeaders())->handle(new Request(), function () use ($tags, $lastModifiedDate, $projects, $faq) {
             $response = new Response();
             $response->setPublic();
+            $response->header('Last-modified', $lastModifiedDate);
             $response->setLastModified($lastModifiedDate);
             if ($response->isNotModified(\request())) {
                 return $response;
