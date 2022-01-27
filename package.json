@@ -21,6 +21,8 @@
         "laravel-mix": "^6.0.6",
         "laravel-mix-eslint": "^0.2.0",
         "laravel-mix-tailwind": "^0.1",
+        "prettier": "2.5.1",
+        "prettier-plugin-tailwindcss": "^0.1.4",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.32",
         "sass-loader": "^12.4.0",
