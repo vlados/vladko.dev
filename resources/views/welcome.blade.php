@@ -24,8 +24,7 @@
 
 						<p class="box-border p-0 m-0 text-lg text-center align-baseline border-0 print:text-left">
 							Full-stack web developer with more than 16 years of experience leading both front-end and
-							back-end development. Let teams of 5-15 people across technology, business and design
-							departments.
+							back-end development. Led cross-functional teams of up to 15 people.
 						</p>
 						<a href="#contact"
 						   class="box-border inline-flex items-center content-center px-6 py-2 m-0 overflow-visible font-semibold text-center text-white normal-case bg-indigo-700 border border-indigo-700 border-solid rounded-full cursor-pointer mt-7 focus:bg-blue-900 focus:border-blue-900 focus:shadow-none focus:text-white hover:bg-blue-900 hover:border-blue-900 hover:text-white print:hidden">
