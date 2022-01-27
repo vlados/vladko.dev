@@ -113,6 +113,9 @@ window.loadProject = (id) => {
 		},
 	}));
 	window['Livewire'].emit('project-modal', id);
+	window['gtag']('event', 'viewProject',{
+		'id': id
+	});
 	document.body.style.overflow = 'hidden';
 };
 Alpine.start();
