@@ -35,6 +35,7 @@
         "facade/ignition": "^2.17",
         "fakerphp/faker": "^1.9.1",
         "friendsofphp/php-cs-fixer": "^3.4",
+        "imanghafoori/laravel-microscope": "^1.0",
         "itsgoingd/clockwork": "^5.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
@@ -68,15 +69,18 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi"
+			"@php artisan vendor:publish --tag=laravel-assets --ansi",
+			"@php artisan livewire:publish --assets"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
-    },
+        ],
+		"check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run --ansi",
+		"fix-style": "php-cs-fixer fix --using-cache=no --ansi"
+	},
     "extra": {
         "laravel": {
             "dont-discover": []
