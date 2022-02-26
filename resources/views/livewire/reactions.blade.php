@@ -8,9 +8,9 @@
                 @if (!$bravo)
                     <x-svg-icon type="light" name="hands-clapping" class="delay-1000 stroke-2 w-3.5 h-3.5 fill-green-300 mr-2 -ml-3.5 -left-2 relative group-hover:animate-ping"/>
                 @endif
-                Bravo
+                <span class="hidden md:inline">Bravo</span>
                 <span
-                    class="bg-gray-100 font-semibold ml-2.5 text-gray-700 text-xs p-0.5 px-1 rounded-md">{{ $bravos }}</span>
+                    class="bg-gray-100 font-semibold md:ml-2.5 text-gray-700 text-xs p-0.5 px-1 rounded-md">{{ $bravos }}</span>
             </button>
         </div>
         <div class="relative z-0 inline-flex shadow-sm rounded-md">
@@ -21,8 +21,9 @@
                 @if (!$liked)
                     <x-svg-icon type="light" name="thumbs-up" class="stroke-2 w-3.5 h-3.5 fill-indigo-300 mr-2 -ml-3.5 -left-2 relative group-hover:animate-ping"/>
                 @endif
-                Like
-                <span class="bg-gray-100 font-semibold ml-2.5 text-gray-700 text-xs p-0.5 px-1 rounded-md"
+
+				<span class="hidden md:inline">Like</span>
+                <span class="bg-gray-100 font-semibold md:ml-2.5 text-gray-700 text-xs p-0.5 px-1 rounded-md"
                       wire:key="reactionLikes">{{ $likes }}</span>
             </button>
         </div>
@@ -33,9 +34,9 @@
                 @if (!$loved)
                     <x-svg-icon type="light" name="heart" class="stroke-2 w-3.5 h-3.5 fill-red-300 mr-2 -ml-3.5 -left-2 relative group-hover:animate-ping"/>
                 @endif
-                Love
+				<span class="hidden md:inline">Love</span>
                 <span
-                    class="bg-gray-100 font-semibold ml-2.5 text-gray-700 text-xs p-0.5 px-1 rounded-md">{{ $loves }}</span>
+                    class="bg-gray-100 font-semibold md:ml-2.5 text-gray-700 text-xs p-0.5 px-1 rounded-md">{{ $loves }}</span>
             </button>
         </div>
     </div>
