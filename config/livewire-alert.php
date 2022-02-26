@@ -12,8 +12,8 @@ return [
 //</svg>
 //          </div>',
         'customClass' => [
-            'container' => 'fixed bottom-10 -translate-x-2/4 translate left-2/4 transform w-4/5 -translate-x-2/4 translate left-2/4 transform w-4/5 max-w-screen-lg md:top-5 lg:min-w-max md:bottom-auto lg:w-max ',
-            'popup' => 'mt-12 w-max bg-white shadow-xl rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5',
+            'container' => 'fixed !left-0 !right-0 !translate-x-0 lg:transform lg:!-translate-x-1/2 translate lg:!left-1/2 transform lg:!w-4/5 !max-w-screen-lg !md:top-5 lg:min-w-max md:bottom-auto',
+            'popup' => 'lg:mt-12 w-max bg-white shadow-xl rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5',
         ],
         'confirmButtonText' => 'Ok',
         'cancelButtonText' => 'Cancel',

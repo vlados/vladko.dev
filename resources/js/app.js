@@ -59,6 +59,12 @@ document.addEventListener('alpine:init', () => {
 	}));
 	Alpine.data('scrollToTop', () => ({
 		visibleScrollToTop: false, init() {
+			window.addEventListener('project-modal', () => {
+				this.visibleScrollToTop = false;
+			});
+			window.addEventListener('hide-modal', () => {
+				this.visibleScrollToTop = true;
+			});
 			window.addEventListener('scroll', () => {
 				if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
 					this.visibleScrollToTop = true;
@@ -77,6 +83,7 @@ document.addEventListener('alpine:init', () => {
 			this.visible = false;
 			document.body.style.overflow = '';
 			window['Livewire'].emit('hide-modal');
+			window.dispatchEvent(new CustomEvent('hide-modal'));
 		}, init() {
 		},
 	}));
@@ -113,9 +120,11 @@ window.loadProject = (id) => {
 		},
 	}));
 	window['Livewire'].emit('project-modal', id);
-	window['gtag']('event', 'viewProject',{
-		'id': id
-	});
+	if (typeof window['gtag'] == 'function') {
+		window['gtag']('event', 'viewProject', {
+			'id': id
+		});
+	}
 	document.body.style.overflow = 'hidden';
 };
 Alpine.start();

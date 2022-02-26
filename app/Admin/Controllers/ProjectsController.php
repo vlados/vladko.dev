@@ -29,8 +29,8 @@ class ProjectsController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('project_name', __('Project name'));
         $grid->column('technologies', __('Technologies'));
-		$grid->model()->orderBy('order_column');
-		$grid->sortable();
+        $grid->model()->orderBy('order_column');
+        $grid->sortable();
 
         return $grid;
     }

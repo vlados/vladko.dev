@@ -19,10 +19,6 @@ class ProjectDetails extends Component
     public $visits;
     private GuestUser $user;
 
-    public function mount()
-    {
-    }
-
     public function load($id)
     {
         $this->like = false;

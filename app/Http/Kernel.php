@@ -39,7 +39,6 @@ class Kernel extends HttpKernel
             \Spatie\Csp\AddCspHeaders::class,
 
         ],
-
         'api' => [
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
