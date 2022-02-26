@@ -22,7 +22,7 @@
 			@foreach($tags as $tag)
 				<button type="button" wire:key="tag_{{ ($tag) }}"
 						class="flex focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 rounded-md focus:outline-none focus-visible:ring-offset-gray-100">
-                    <span wire:click="$set('selected_tag', '{{ $tag }}')"
+                    <span wire:click.prefetch="$set('selected_tag', '{{ $tag }}')"
 						  class="p-1.5 lg:px-5 rounded-md flex items-center text-sm font-medium {{ $selected_tag==$tag?'bg-white shadow':'' }}">
                         {{ $tag }}
                     </span>
