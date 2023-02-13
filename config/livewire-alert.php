@@ -12,7 +12,7 @@ return [
 //</svg>
 //          </div>',
         'customClass' => [
-            'container' => 'fixed !left-0 !right-0 !translate-x-0 lg:transform lg:!-translate-x-1/2 translate lg:!left-1/2 transform lg:!w-4/5 !max-w-screen-lg !md:top-5 lg:min-w-max md:bottom-auto',
+            'container' => 'fixed !left-0 !right-0 !translate-x-0 lg:transform lg:!-translate-x-1/2 translate lg:!left-1/2 transform lg:!w-2/5 !max-w-screen-lg !md:top-5 lg:min-w-max md:bottom-auto',
             'popup' => 'lg:mt-12 w-max bg-white shadow-xl rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5',
         ],
         'confirmButtonText' => 'Ok',
@@ -21,7 +21,7 @@ return [
         'showConfirmButton' => false,
         'showCloseButton' => true,
         'position' => 'top',
-        'timer' => 3500,
+        'timer' => 350000,
         'timerProgressBar' => true,
         'toast' => true,
         'text' => '',

@@ -128,3 +128,5 @@ window.loadProject = (id) => {
 	document.body.style.overflow = 'hidden';
 };
 Alpine.start();
+
+// import.glob('./fonts/inter/*.woff');
