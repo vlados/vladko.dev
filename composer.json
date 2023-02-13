@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.4|^8.0",
@@ -19,7 +22,7 @@
         "jantinnerezo/livewire-alert": "^2.2",
         "laravel-admin-ext/grid-sortable": "^1.1",
         "laravel-frontend-presets/tall": "^4.0",
-        "laravel/framework": "^9.0",
+        "laravel/framework": "^9.19",
         "livewire/livewire": "^2.8",
         "nunomaduro/phpinsights": "^2.7",
         "php-ffmpeg/php-ffmpeg": "^1.1",
@@ -69,8 +72,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-			"@php artisan vendor:publish --tag=laravel-assets --ansi",
-			"@php artisan livewire:publish --assets"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi",
+            "@php artisan livewire:publish --assets"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -78,9 +81,9 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-		"check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run --ansi",
-		"fix-style": "php-cs-fixer fix --using-cache=no --ansi"
-	},
+        "check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run --ansi",
+        "fix-style": "php-cs-fixer fix --using-cache=no --ansi"
+    },
     "extra": {
         "laravel": {
             "dont-discover": []
