@@ -138,9 +138,9 @@ class MediaLibraryBase extends Field
             }
 
             return true;
-        } else {
-            exit;
         }
+            exit;
+        
     }
 
     public function getValidator(array $input)

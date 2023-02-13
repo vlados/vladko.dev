@@ -31,12 +31,13 @@ class MyCustomPolicy extends Basic
         $this->defineImages();
         $this->defineStyles();
 
-        if (app()->environment('local')) {
+        if (!app()->environment('local')){
+    return;} 
             $this->addDirective(Directive::IMG, '*');
             $this->addDirective(Directive::IMG, 'https://images.unsplash.com/');
             $this->addDirective(Directive::CONNECT, 'ws://localhost:8080');
             $this->addDirective(Directive::CONNECT, 'http://localhost:8080');
-        }
+        
     }
 
     private function defineStyles()
