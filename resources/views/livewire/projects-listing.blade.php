@@ -9,8 +9,7 @@
 		@unlessbot
 		<livewire:project-details/>
 		<div class="md:hidden">
-			<x-dynamic-component
-				:component="WireUiComponent::resolve('select')"
+			<x-select
 				label="Filter by technology"
 				placeholder="All technologies"
 				:options="$tags"
