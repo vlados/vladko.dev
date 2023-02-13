@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 border flex inf">
+<div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8 mb-10 flex">
 	<span class="anchor" id="faq"></span>
 
 	<div class="lg:grid lg:grid-cols-3 lg:gap-8">

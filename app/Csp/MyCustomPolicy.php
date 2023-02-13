@@ -14,7 +14,7 @@ class MyCustomPolicy extends Basic
     {
         $this->assets_url = config('app.asset_url') ?? config('app.url');
         if (app()->environment('local')) {
-            $this->assets_url .= ' http://localhost:8080';
+            $this->assets_url .= ' http://127.0.0.1:5173';
         }
 
         $this
@@ -32,12 +32,12 @@ class MyCustomPolicy extends Basic
         $this->defineStyles();
 
         if (!app()->environment('local')){
-    return;} 
+    return;}
             $this->addDirective(Directive::IMG, '*');
             $this->addDirective(Directive::IMG, 'https://images.unsplash.com/');
-            $this->addDirective(Directive::CONNECT, 'ws://localhost:8080');
-            $this->addDirective(Directive::CONNECT, 'http://localhost:8080');
-        
+            $this->addDirective(Directive::CONNECT, 'ws://127.0.0.1:5173');
+            $this->addDirective(Directive::CONNECT, 'http://127.0.0.1:5173');
+
     }
 
     private function defineStyles()

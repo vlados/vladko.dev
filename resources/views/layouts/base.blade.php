@@ -8,28 +8,17 @@
 
 <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+	<meta property="csp-nonce" content="{{ csp_nonce() }}">
 
     <!-- Styles -->
     @bot
-    <link rel="preload" href="{{ asset(mix('css/critical.css')) }}" as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
+		@vite(['resources/sass/critical.scss'])
     @endbot
     @unlessbot
-    <link rel="stylesheet" href="{{ asset(mix('css/fonts.css')) }}">
+	@vite(['resources/sass/fonts.scss'])
     @livewireStyles(['nonce' => csp_nonce() ])
-    <script nonce="{{  csp_nonce() }}">
-        window.Wireui = {
-            hook(hook, callback) {
-                window.addEventListener(`wireui:${hook}`, () => callback())
-            },
-            dispatchHook(hook) {
-                window.dispatchEvent(new Event(`wireui:${hook}`))
-            }
-        }
-    </script>
-    <script nonce="{{  csp_nonce() }}" src="{{ asset(mix('js/wireui.js')) }}"></script>
-    <link rel="preload" href="{{ asset(mix('css/app.css')) }}" as="style">
-    <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+	@wireUiScripts(['nonce' => csp_nonce() ])
+	@vite(['resources/sass/app.scss'])
     @production
     <!-- Global site tag (gtag.js) - Google Analytics -->
         <script nonce="{{  csp_nonce() }}" async
@@ -59,7 +48,6 @@
 
 <body class="min-h-screen antialiased bg-gray-50 print:bg-white" x-data="scrollToTop">
 @unlessbot
-
 <div
     class="fixed inset-0 z-50 flex flex-col items-center justify-center ease-linear bg-white bg-opacity-50 backdrop-blur-2xl white"
     x-transition:leave="transition ease-in delay-500" x-transition:leave-start="opacity-100 transform scale-100"
@@ -69,7 +57,6 @@
 </div>
 @endbot
 @yield('body')
-
 
 @unlessbot
 @livewireScripts(['nonce' => csp_nonce() ])
@@ -87,10 +74,10 @@
 </button>
 @endbot
 @bot
-<script nonce="{{ csp_nonce() }}" src="{{ asset(mix('js/minimal.js')) }}" defer></script>
+{{--	@vite(['resources/js/minimal.js'])--}}
 @else
-    <script nonce="{{ csp_nonce() }}" src="{{ asset(mix('js/app.js')) }}" defer></script>
-    @endbot
+	@vite(['resources/js/app.js'])
+@endbot
 
 </body>
 

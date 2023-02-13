@@ -8,13 +8,13 @@
 }
 
 @import "./sweetalert2";
-@import "~@fancyapps/ui/dist/panzoom.css";
-@import "~@fancyapps/ui/dist/panzoom.controls.css";
+@import "@fancyapps/ui/src/Fancybox/Fancybox";
+@import "@fancyapps/ui/dist/panzoom.css";
+@import "@fancyapps/ui/dist/panzoom.controls.css";
 $aos-distance: 200px; // It has to be above import
-@import "~aos/dist/aos.css";
+@import "aos/dist/aos.css";
 @import "heart";
 
-@import "~@fancyapps/ui/src/Fancybox/Fancybox";
 [data-aos=zoom-out] {
     transform: scale(2.5);
 }
