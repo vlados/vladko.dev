@@ -28,9 +28,8 @@ class HomeController extends Controller
         // create $dates array and fill it with dates, then we can get the newest and set it as Last-modified in the headers
         $lastModifiedDate = _cache('lastModifiedDate', function () {
             $dates = [];
-            $commitDate = new \DateTime(trim(exec('git log -n1 --pretty=%ci HEAD')));
-            $commitDate->setTimezone(new \DateTimeZone('UTC'));
-            $dates[] = ($commitDate->getTimestamp());
+            // composer.lock mtime ~ last deploy; exec() is disabled on the host
+            $dates[] = filemtime(base_path('composer.lock')) ?: time();
 
             $projectsDate = Project::select('updated_at')->orderBy('updated_at', 'desc')->first();
             if ($projectsDate) {
