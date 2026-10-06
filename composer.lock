@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dad54c322fc2eea6e9825923402f085c",
+    "content-hash": "41b3efee710749cf90b121098f362d27",
     "packages": [
         {
             "name": "appstract/laravel-opcache",
@@ -5028,34 +5028,39 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.2.3",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "abbdbb70e0245d5f3bf77874cea1dfb0c930d06f"
+                "reference": "c54350438cd6914616f790a49cb424605f421562"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/abbdbb70e0245d5f3bf77874cea1dfb0c930d06f",
-                "reference": "abbdbb70e0245d5f3bf77874cea1dfb0c930d06f",
+                "url": "https://api.github.com/repos/nette/schema/zipball/c54350438cd6914616f790a49cb424605f421562",
+                "reference": "c54350438cd6914616f790a49cb424605f421562",
                 "shasum": ""
             },
             "require": {
-                "nette/utils": "^2.5.7 || ^3.1.5 ||  ^4.0",
-                "php": ">=7.1 <8.3"
+                "nette/utils": "^4.0",
+                "php": "8.1 - 8.5"
             },
             "require-dev": {
-                "nette/tester": "^2.3 || ^2.4",
-                "phpstan/phpstan-nette": "^1.0",
-                "tracy/tracy": "^2.7"
+                "nette/phpstan-rules": "^1.0",
+                "nette/tester": "^2.6",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1.39@stable",
+                "tracy/tracy": "^2.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
+                "psr-4": {
+                    "Nette\\": "src"
+                },
                 "classmap": [
                     "src/"
                 ]
@@ -5084,53 +5089,57 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.2.3"
+                "source": "https://github.com/nette/schema/tree/v1.3.6"
             },
-            "time": "2022-10-13T01:24:26+00:00"
+            "time": "2026-08-16T21:58:41+00:00"
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.0",
+            "version": "v4.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "cacdbf5a91a657ede665c541eda28941d4b09c1e"
+                "reference": "b043439dbdf954e6c28b5ea7e34b0100f83165e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/cacdbf5a91a657ede665c541eda28941d4b09c1e",
-                "reference": "cacdbf5a91a657ede665c541eda28941d4b09c1e",
+                "url": "https://api.github.com/repos/nette/utils/zipball/b043439dbdf954e6c28b5ea7e34b0100f83165e0",
+                "reference": "b043439dbdf954e6c28b5ea7e34b0100f83165e0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0 <8.3"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/finder": "<3",
                 "nette/schema": "<1.2.2"
             },
             "require-dev": {
-                "jetbrains/phpstorm-attributes": "dev-master",
-                "nette/tester": "^2.4",
-                "phpstan/phpstan": "^1.0",
+                "jetbrains/phpstorm-attributes": "^1.2",
+                "nette/phpstan-rules": "^1.0",
+                "nette/tester": "^2.5",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
                 "ext-gd": "to use Image",
-                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-iconv": "to use Strings::chr(), ord() and reverse()",
                 "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
                 "ext-json": "to use Nette\\Utils\\Json",
                 "ext-mbstring": "to use Strings::lower() etc...",
-                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
-                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
+                "psr-4": {
+                    "Nette\\": "src"
+                },
                 "classmap": [
                     "src/"
                 ]
@@ -5171,9 +5180,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.0"
+                "source": "https://github.com/nette/utils/tree/v4.1.5"
             },
-            "time": "2023-02-02T10:41:53+00:00"
+            "time": "2026-07-17T23:02:45+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -12316,339 +12325,6 @@
             "time": "2022-11-02T16:23:29+00:00"
         },
         {
-            "name": "imanghafoori/composer-json",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imanghafoori1/composer-json.git",
-                "reference": "513a142f9ffb740719b695a95f1087b511d15167"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/composer-json/zipball/513a142f9ffb740719b695a95f1087b511d15167",
-                "reference": "513a142f9ffb740719b695a95f1087b511d15167",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "7.*|8.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ImanGhafoori\\ComposerJson\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": ":Iman Ghafoori",
-                    "email": "imanghafoori1@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A utility class to read from composer.json file.",
-            "homepage": "https://github.com/imanghafoori1/composer-json",
-            "keywords": [
-                "composer.json"
-            ],
-            "support": {
-                "issues": "https://github.com/imanghafoori1/composer-json/issues",
-                "source": "https://github.com/imanghafoori1/composer-json/tree/v1.0.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/:vendor_name",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-02-05T18:52:49+00:00"
-        },
-        {
-            "name": "imanghafoori/laravel-microscope",
-            "version": "v1.0.284",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imanghafoori1/laravel-microscope.git",
-                "reference": "f70b2fcd2a18fbeff0a6ecc70eceda3fcaa41d0c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/laravel-microscope/zipball/f70b2fcd2a18fbeff0a6ecc70eceda3fcaa41d0c",
-                "reference": "f70b2fcd2a18fbeff0a6ecc70eceda3fcaa41d0c",
-                "shasum": ""
-            },
-            "require": {
-                "imanghafoori/composer-json": "^1.0.2",
-                "imanghafoori/php-abstract-filesystem": "^0.1.1",
-                "imanghafoori/php-search-replace": "1.1.8",
-                "imanghafoori/php-token-analyzer": "^0.1.45",
-                "imanghafoori/smart-realtime-facades": "^1.1.4",
-                "jetbrains/phpstorm-attributes": "1.*",
-                "laravel/framework": "5.*|6.*|7.*|8.*|9.*|10.*",
-                "php": "^7.1.3|8.0.*|8.1.*|8.2.*"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^7.0",
-                "phpunit/phpunit": "^9.5.20"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Imanghafoori\\LaravelMicroscope\\LaravelMicroscopeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Imanghafoori\\LaravelMicroscope\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Iman",
-                    "email": "imanghafoori1@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Automatically test your laravel application",
-            "homepage": "https://github.com/imanghafoori1/laravel-microscope",
-            "keywords": [
-                "laravel-microscope",
-                "laravel-testing"
-            ],
-            "support": {
-                "issues": "https://github.com/imanghafoori1/laravel-microscope/issues",
-                "source": "https://github.com/imanghafoori1/laravel-microscope/tree/v1.0.284"
-            },
-            "time": "2023-02-12T21:37:29+00:00"
-        },
-        {
-            "name": "imanghafoori/php-abstract-filesystem",
-            "version": "v0.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imanghafoori1/abstract_php_filesystem.git",
-                "reference": "59a4363e437adf5f5514da38c2bc4437b51b2b50"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/abstract_php_filesystem/zipball/59a4363e437adf5f5514da38c2bc4437b51b2b50",
-                "reference": "59a4363e437adf5f5514da38c2bc4437b51b2b50",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3|8.0.*|8.1.*|8.2.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.0",
-                "symfony/var-dumper": "5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Imanghafoori\\Filesystem\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Iman",
-                    "email": "imanghafoori1@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A thin layer on the top the php native php system.",
-            "homepage": "https://github.com/imanghafoori1/abstract_php_filesystem",
-            "keywords": [
-                "laravel-testing",
-                "php-filesystem"
-            ],
-            "support": {
-                "issues": "https://github.com/imanghafoori1/abstract_php_filesystem/issues",
-                "source": "https://github.com/imanghafoori1/abstract_php_filesystem/tree/v0.1.4"
-            },
-            "time": "2022-10-27T16:39:43+00:00"
-        },
-        {
-            "name": "imanghafoori/php-search-replace",
-            "version": "v1.1.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imanghafoori1/php-smart-search-replace.git",
-                "reference": "e1fcaec433a636290813034c82c4f6ea560cbf06"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/php-smart-search-replace/zipball/e1fcaec433a636290813034c82c4f6ea560cbf06",
-                "reference": "e1fcaec433a636290813034c82c4f6ea560cbf06",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3|8.0.*|8.1.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.0",
-                "symfony/var-dumper": "^5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Imanghafoori\\SearchReplace\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Iman",
-                    "email": "imanghafoori1@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Smart search replace functionality for php source code",
-            "homepage": "https://github.com/imanghafoori1/php-smart-search-replace",
-            "keywords": [
-                "php-search-replace"
-            ],
-            "support": {
-                "issues": "https://github.com/imanghafoori1/php-smart-search-replace/issues",
-                "source": "https://github.com/imanghafoori1/php-smart-search-replace/tree/v1.1.8"
-            },
-            "time": "2022-07-03T21:01:41+00:00"
-        },
-        {
-            "name": "imanghafoori/php-token-analyzer",
-            "version": "v0.1.45",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imanghafoori1/php_token_analyzer.git",
-                "reference": "57bd1d0079d52b85d9f7c23d424381f943ca2ca6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/php_token_analyzer/zipball/57bd1d0079d52b85d9f7c23d424381f943ca2ca6",
-                "reference": "57bd1d0079d52b85d9f7c23d424381f943ca2ca6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0|8.0.*|8.1.*|8.2.*",
-                "phpdocumentor/reflection-docblock": "4.*|5.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0|^7.0|^8.0|^9.0",
-                "symfony/var-dumper": "3.*|4.*|5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Imanghafoori\\TokenAnalyzer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Iman",
-                    "email": "imanghafoori1@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Token analyzer utility for php",
-            "homepage": "https://github.com/imanghafoori1/php_token_analyzer",
-            "keywords": [
-                "php-token-analyzer"
-            ],
-            "support": {
-                "issues": "https://github.com/imanghafoori1/php_token_analyzer/issues",
-                "source": "https://github.com/imanghafoori1/php_token_analyzer/tree/v0.1.45"
-            },
-            "time": "2023-02-06T11:57:53+00:00"
-        },
-        {
-            "name": "imanghafoori/smart-realtime-facades",
-            "version": "v1.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imanghafoori1/smart-realtime-facades.git",
-                "reference": "2614e5669ea6a55603f73924827f45339dc6b0f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/smart-realtime-facades/zipball/2614e5669ea6a55603f73924827f45339dc6b0f3",
-                "reference": "2614e5669ea6a55603f73924827f45339dc6b0f3",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "~5.1|6.*|7.*|8.*|9.*",
-                "php": "7.2.*|7.3.*|7.4.*|8.0.*|8.1.*"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~7.0"
-            },
-            "suggest": {
-                "imanghafoori/laravel-heyman": "It allows to write expressive code to authorize, validate and authenticate.",
-                "imanghafoori/laravel-masterpass": "You can set a master password for your accounts.",
-                "imanghafoori/laravel-terminator": "Gives you opportunity to refactor your controllers.",
-                "imanghafoori/laravel-widgetize": "Gives you a better structure and caching opportunity for your laravel apps."
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Imanghafoori\\RealtimeFacades\\SmartRealTimeFacadesProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Imanghafoori\\RealtimeFacades\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Iman Ghafoori",
-                    "email": "imanghafoori1@gmail.com"
-                }
-            ],
-            "description": "Real-time facades with IDE auto-completion.",
-            "homepage": "https://github.com/imanghafoori1/smart-realtime-facades",
-            "keywords": [
-                "facade",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/imanghafoori1/smart-realtime-facades/issues",
-                "source": "https://github.com/imanghafoori1/smart-realtime-facades/tree/v1.1.5"
-            },
-            "time": "2022-06-24T19:42:29+00:00"
-        },
-        {
             "name": "itsgoingd/clockwork",
             "version": "v5.1.12",
             "source": {
@@ -12715,48 +12391,6 @@
                 }
             ],
             "time": "2022-12-13T00:04:12+00:00"
-        },
-        {
-            "name": "jetbrains/phpstorm-attributes",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JetBrains/phpstorm-attributes.git",
-                "reference": "a7a83ae5df4dd3c0875484483de19de8edf60a9f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JetBrains/phpstorm-attributes/zipball/a7a83ae5df4dd3c0875484483de19de8edf60a9f",
-                "reference": "a7a83ae5df4dd3c0875484483de19de8edf60a9f",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JetBrains\\PhpStorm\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "JetBrains",
-                    "homepage": "https://www.jetbrains.com"
-                }
-            ],
-            "description": "PhpStorm specific attributes",
-            "keywords": [
-                "attributes",
-                "jetbrains",
-                "phpstorm"
-            ],
-            "support": {
-                "issues": "https://youtrack.jetbrains.com/newIssue?project=WI",
-                "source": "https://github.com/JetBrains/phpstorm-attributes/tree/1.0"
-            },
-            "time": "2020-11-17T11:09:47+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -13015,171 +12649,6 @@
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
             "time": "2022-02-21T01:04:05+00:00"
-        },
-        {
-            "name": "phpdocumentor/reflection-common",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/1d01c49d4ed62f25aa84a747ad35d5a16924662b",
-                "reference": "1d01c49d4ed62f25aa84a747ad35d5a16924662b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jaap van Otterdijk",
-                    "email": "opensource@ijaap.nl"
-                }
-            ],
-            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
-            "homepage": "http://www.phpdoc.org",
-            "keywords": [
-                "FQSEN",
-                "phpDocumentor",
-                "phpdoc",
-                "reflection",
-                "static analysis"
-            ],
-            "support": {
-                "issues": "https://github.com/phpDocumentor/ReflectionCommon/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionCommon/tree/2.x"
-            },
-            "time": "2020-06-27T09:03:43+00:00"
-        },
-        {
-            "name": "phpdocumentor/reflection-docblock",
-            "version": "5.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/622548b623e81ca6d78b721c5e029f4ce664f170",
-                "reference": "622548b623e81ca6d78b721c5e029f4ce664f170",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^7.2 || ^8.0",
-                "phpdocumentor/reflection-common": "^2.2",
-                "phpdocumentor/type-resolver": "^1.3",
-                "webmozart/assert": "^1.9.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1.3.2",
-                "psalm/phar": "^4.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "me@mikevanriel.com"
-                },
-                {
-                    "name": "Jaap van Otterdijk",
-                    "email": "account@ijaap.nl"
-                }
-            ],
-            "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "support": {
-                "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.3.0"
-            },
-            "time": "2021-10-19T17:43:47+00:00"
-        },
-        {
-            "name": "phpdocumentor/type-resolver",
-            "version": "1.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "48f445a408c131e38cab1c235aa6d2bb7a0bb20d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/48f445a408c131e38cab1c235aa6d2bb7a0bb20d",
-                "reference": "48f445a408c131e38cab1c235aa6d2bb7a0bb20d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ^8.0",
-                "phpdocumentor/reflection-common": "^2.0"
-            },
-            "require-dev": {
-                "ext-tokenizer": "*",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "^1.8",
-                "phpstan/phpstan-phpunit": "^1.1",
-                "phpunit/phpunit": "^9.5",
-                "rector/rector": "^0.13.9",
-                "vimeo/psalm": "^4.25"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "phpDocumentor\\Reflection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "me@mikevanriel.com"
-                }
-            ],
-            "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "support": {
-                "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.2"
-            },
-            "time": "2022-10-14T12:47:21+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -14678,13 +14147,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4|^8.0",
         "ext-json": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
